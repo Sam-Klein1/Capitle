@@ -1,23 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
+import GuessBoxes from './components/GuessBoxes';
+import GuessButton from './components/GuessButton';
+import CityImg from './components/CityImg'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>CapitLe</h1>
+      <CityImg />
+      <GuessBoxes />
+      {/* <GuessButton /> */}
     </div>
   );
 }
