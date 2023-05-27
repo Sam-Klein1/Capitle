@@ -1,0 +1,36 @@
+.guess-boxes {
+
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto; /* Add this line to center the component */
+}
+
+.rectangle {
+
+  border-radius: 5px;
+  background-color: lightgrey; /* Set the background color to aqua */
+  width: 500px; /* Adjust the width as needed */
+  height: 35px; /* Adjust the height as needed */
+  margin-bottom: 5px; /* Add spacing between the rectangles */
+}
+
+.guess-button {
+
+    border-radius: 5px;
+    background-color: whitesmoke; /* Set the background color to aqua */
+    width: 500px; /* Adjust the width as needed */
+    height: 35px; /* Adjust the height as needed */
+    margin-bottom: 5px; /* Add spacing between the rectangles */
+  }
+
+.text-field {
+
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    background-color: white; /* Set the background color to aqua */
+    width: 494px; /* Adjust the width as needed */
+    height: 35px; /* Adjust the height as needed */
+    margin-bottom: 5px;
+}
