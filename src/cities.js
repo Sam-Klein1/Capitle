@@ -171,4 +171,10 @@ export const capitalCities = [
     { city: 'Zagreb', country: 'Croatia' },
     { city: 'Zurich', country: 'Switzerland' }
   ];
+
+  export function getRandomCity() {
+    const randomIndex = Math.floor(Math.random() * capitalCities.length);
+    return capitalCities[randomIndex].city;
+  }
+  
   

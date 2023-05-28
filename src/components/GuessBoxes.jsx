@@ -3,7 +3,7 @@ import { capitalCities } from '../cities.js';
 import '../css/GuessBoxes.css';
 import '../css/suggestions.css';
 
-function GuessBoxes() {
+function GuessBoxes({todayCity}) {
   const [showCityList, setShowCityList] = useState(false);
   const inputRef = useRef(null);
   const suggestionRef = useRef(null);
@@ -19,6 +19,20 @@ function GuessBoxes() {
     setShowCityList(false)
     // console.log(`Selected city: ${city}`);
   };
+
+  const handleGuess = () => {
+
+    const guess = document.getElementById("text-field").value;
+
+    if (guess === todayCity) { //correct
+        
+
+    }  
+    else{ //incorrect
+
+        
+    }
+  }
 
   const handleClickOutside = (event) => {
     if (
@@ -46,7 +60,7 @@ function GuessBoxes() {
               className="suggestion-button"
               onClick={() => handleCitySelection(city.city)}
             >
-              {city.city}
+              <span className="city">{city.city}</span>, {city.country}
             </button>
           ))}
         </div>
@@ -62,7 +76,10 @@ function GuessBoxes() {
         onFocus={handleInputFocus}
         ref={inputRef}
       />
-      <button className="guess-button">
+      <button 
+        className="guess-button"
+        onClick={handleGuess}
+      >
         Guess! 🌇
       </button>
     </div>
