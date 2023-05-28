@@ -1,3 +1,8 @@
+button {
+
+    cursor: pointer; 
+ }
+ 
 .guess-boxes {
 
   margin-top: 5px;
@@ -18,12 +23,17 @@
 
 .guess-button {
 
+    border: 1px solid black;
     border-radius: 5px;
-    background-color: whitesmoke; /* Set the background color to aqua */
+    background-color: white; /* Set the background color to aqua */
     width: 500px; /* Adjust the width as needed */
     height: 35px; /* Adjust the height as needed */
     margin-bottom: 5px; /* Add spacing between the rectangles */
   }
+.guess-button:hover{
+
+    background-color: lightgray;
+}
 
 .text-field {
 
