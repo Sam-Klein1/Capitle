@@ -1,5 +1,4 @@
 import './App.css';
-import GuessBoxes from './components/GuessBoxes';
 import CityImg from './components/CityImg'
 
 function App() {

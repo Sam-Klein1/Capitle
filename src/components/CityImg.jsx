@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { capitalCities } from '../cities';
-import defaultIMG from "../assets/default.jpg"
 import '../css/CityImg.css'
 import GuessBoxes from './GuessBoxes';
 
@@ -37,6 +36,7 @@ function CityImg() {
           <img 
             src={getImageFilePath(todayCity)} 
             className='city-image' 
+            alt = "the rendered image for the game."
           />
           <GuessBoxes todayCity={todayCity}/>
     

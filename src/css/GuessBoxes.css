@@ -5,6 +5,7 @@ button {
  
 .guess-boxes {
 
+  width: 98%;
   margin-top: 5px;
   display: flex;
   flex-direction: column;
@@ -16,9 +17,21 @@ button {
 
   border-radius: 5px;
   background-color: lightgrey; /* Set the background color to aqua */
-  width: 500px; /* Adjust the width as needed */
+  width: 99%; /* Adjust the width as needed */
   height: 35px; /* Adjust the height as needed */
   margin-bottom: 5px; /* Add spacing between the rectangles */
+}
+
+.rectangle.correct {
+  border: 2px solid black;
+  text-align: left;
+  background-color: lightgreen;
+}
+
+.rectangle.incorrect {
+  border: 2px solid black;
+  text-align: left;
+  background-color: lightcoral;
 }
 
 .guess-button {
@@ -26,13 +39,19 @@ button {
     border: 1px solid black;
     border-radius: 5px;
     background-color: white; /* Set the background color to aqua */
-    width: 500px; /* Adjust the width as needed */
+    width: 100%; /* Adjust the width as needed */
     height: 35px; /* Adjust the height as needed */
     margin-bottom: 5px; /* Add spacing between the rectangles */
   }
 .guess-button:hover{
 
-    background-color: lightgray;
+  background-color: lightgray;
+}
+
+.guess-button.disabled:hover{
+
+  background-color: white;
+  cursor: default;
 }
 
 .text-field {
@@ -40,7 +59,7 @@ button {
     border: 1px solid lightgray;
     border-radius: 4px;
     background-color: white; /* Set the background color to aqua */
-    width: 494px; /* Adjust the width as needed */
+    width: 98%; /* Adjust the width as needed */
     height: 35px; /* Adjust the height as needed */
     margin-bottom: 5px;
 }
