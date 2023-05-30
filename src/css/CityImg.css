@@ -1,6 +1,13 @@
-.city-image {
-    border-radius: 5px;
-    width: 380px;
+  .content-container {
+
+    margin-bottom: 50px;
+  }
+  .city-image {
+    width: 500px;
+    max-width: 99%;
+    max-height: 100%;
+    object-fit: contain;
     margin-bottom: 5px;
   }
+  
   

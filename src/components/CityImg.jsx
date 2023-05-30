@@ -32,14 +32,14 @@ function CityImg() {
     };
   
       return (
-        <div>
+        <div className='content-container'>
           <img 
             src={getImageFilePath(todayCity)} 
             className='city-image' 
-            alt = "the rendered image for the game."
+            alt = ""
           />
+          {/* {todayCity} */}
           <GuessBoxes todayCity={todayCity}/>
-    
         </div>
       );
   }

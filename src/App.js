@@ -1,10 +1,11 @@
 import './App.css';
 import CityImg from './components/CityImg'
+import Title from './components/Title';
 
 function App() {
   return (
     <div className="App">
-      <h1>CapitLe</h1>
+      <Title />
       <CityImg />
     </div>
   );

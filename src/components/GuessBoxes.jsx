@@ -8,12 +8,23 @@ function GuessBoxes({ todayCity }) {
     const [guesses, setGuesses] = useState(Array(6).fill('')); // Initialize with an array of 6 empty strings
     const [currentRectangleIndex, setCurrentRectangleIndex] = useState(0); // Initialize with index 0 for the first empty rectangle
     const [isGuessingDisabled, setIsGuessingDisabled] = useState(false);
+    const [suggestionList, setSuggestionList] = useState(capitalCities);
     const inputRef = useRef(null);
     const suggestionRef = useRef(null);
 
     const handleInputFocus = () => {
         setShowCityList(true);
     };
+
+    const handleInputChange = (event) => {
+        const searchQuery = event.target.value.toLowerCase();
+        const filteredCities = capitalCities.filter(
+          (city) =>
+            city.city.toLowerCase().includes(searchQuery) ||
+            city.country.toLowerCase().includes(searchQuery)
+        );
+        setSuggestionList(filteredCities);
+      };
 
     const handleCitySelection = (city) => {
         document.getElementById("text-field").value = city;
@@ -23,7 +34,6 @@ function GuessBoxes({ todayCity }) {
 
     const handleGuess = () => {
         const guess = document.getElementById("text-field").value;
-        
         const isCityExists = capitalCities.some((city) =>
             city.city.toLowerCase() === guess.toLowerCase()
         );
@@ -40,7 +50,7 @@ function GuessBoxes({ todayCity }) {
         setCurrentRectangleIndex(nextRectangleIndex);
         document.getElementById("text-field").value = '';
 
-        if (guess === todayCity) {
+        if (guess.toLowerCase() === todayCity.toLowerCase()) {
             setTimeout(() => {
                 alert('You guessed right!');
             }, 0);
@@ -77,7 +87,7 @@ function GuessBoxes({ todayCity }) {
         <div className="guess-boxes">
             {showCityList && (
                 <div className="suggestion-buttons" ref={suggestionRef}>
-                    {capitalCities.map((city, index) => (
+                    {suggestionList.map((city, index) => (
                         <button
                             key={index}
                             className="suggestion-button"
@@ -91,7 +101,7 @@ function GuessBoxes({ todayCity }) {
             {guesses.map((guess, index) => (
                 <div
                     key={index}
-                    className={`rectangle ${guess ? (guess === todayCity ? 'correct' : 'incorrect') : ''}`}
+                    className={`rectangle ${guess ? (guess.toLowerCase() === todayCity.toLowerCase() ? 'correct' : 'incorrect') : ''}`}
                 >
                     {guess}
                 </div>
@@ -101,8 +111,9 @@ function GuessBoxes({ todayCity }) {
                         id="text-field"
                         className="text-field"
                         type="text"
-                        placeholder="City, Country, territory..."
+                        placeholder="Enter or choose any capital city"
                         onFocus={handleInputFocus}
+                        onChange={handleInputChange}
                         ref={inputRef}
                         disabled={isGuessingDisabled}
                     />
@@ -111,7 +122,7 @@ function GuessBoxes({ todayCity }) {
                         onClick={handleGuess}
                         disabled={isGuessingDisabled}
                     >
-                            Guess! 🌇
+                            Guess!
                     </button>
                 </>
         </div>
