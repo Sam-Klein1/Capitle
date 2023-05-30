@@ -4,7 +4,7 @@ button {
  }
  
 .guess-boxes {
-
+  
   width: 100%;
   max-width: 510px;
   margin-top: 5px;
@@ -16,6 +16,9 @@ button {
 
 .rectangle {
 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border-radius: 5px;
   background-color: lightgrey; /* Set the background color to aqua */
   width: 99%; /* Adjust the width as needed */
@@ -23,12 +26,50 @@ button {
   margin-bottom: 5px; /* Add spacing between the rectangles */
 }
 
+.animate {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.guess-name{
+
+  animation-delay: 0.2s;
+  animation-name: fadeIn;
+  margin-left: 10px;
+}
+
+.guess-distance{
+  text-align: center;
+  animation-delay: 0.4s;
+  animation-name: fadeIn;
+}
+.guess-direction{
+  animation-delay: 0.6s;
+  animation-name: fadeIn;
+  font-size: 25px;
+  margin-right: 10px;
+}
+
 .rectangle.correct {
   width: 98%;
   border: 2px solid black;
   display: flex;
   align-items: center;
+  padding-left: 5px;
   background-color: lightgreen;
+  overflow: hidden;
 }
 
 .rectangle.incorrect {
@@ -38,6 +79,7 @@ button {
   align-items: center;
   padding-left: 5px;
   background-color: lightcoral;
+  overflow: hidden;
 }
 
 

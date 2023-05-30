@@ -10,7 +10,7 @@ for city in cities:
 
     #for each city, search for it on pixabay
     search_query = city.replace(" ", "+")
-    url = f"https://pixabay.com/images/search/{search_query}/"
+    url = f"https://pixabay.com/images/search/{search_query} /"
 
     response = scraper.get(url)
     soup = BeautifulSoup(response.text, "html.parser")
