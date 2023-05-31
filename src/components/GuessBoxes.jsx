@@ -6,7 +6,7 @@ import '../css/suggestions.css';
 
 function GuessBoxes({ todayCity }) {
     const [showCityList, setShowCityList] = useState(false);
-    const [guesses, setGuesses] = useState(Array(6).fill({name: '', dist: 0, dir: ''})); // Initialize with an array of 6 empty strings
+    const [guesses, setGuesses] = useState(Array(6).fill({name: '', dist: 0, dir: '', code: ''})); // Initialize with an array of 6 empty strings
     const [currentRectangleIndex, setCurrentRectangleIndex] = useState(0); // Initialize with index 0 for the first empty rectangle
     const [isGuessingDisabled, setIsGuessingDisabled] = useState(false);
     const [suggestionList, setSuggestionList] = useState(capitalCities);
@@ -101,6 +101,11 @@ function GuessBoxes({ todayCity }) {
               return 'error';
           }          
     }
+
+    const getCode = (capitalName) => {
+
+        return capitalCities.find((city) => city.city === capitalName).code;
+    };
     
     // const findDirection = (src, actual) => {
 
@@ -111,6 +116,7 @@ function GuessBoxes({ todayCity }) {
         const guess = document.getElementById("text-field").value;
         const distance = Math.floor(calculateDist(guess, todayCity));
         const direction = getDir(guess, todayCity);
+        const code = getCode(guess);
 
         const isCityExists = capitalCities.some((city) =>
             city.city.toLowerCase() === guess.toLowerCase()
@@ -126,6 +132,7 @@ function GuessBoxes({ todayCity }) {
             name: guess,
             dist: distance,
             dir: direction,
+            code: code,
         };
         setGuesses(updatedGuesses);
         const nextRectangleIndex = currentRectangleIndex + 1;
@@ -191,7 +198,7 @@ function GuessBoxes({ todayCity }) {
                 {guess.name && (
                     <>
                     <div className="guess-name animate">{guess.name}</div>
-                    <div className="guess-distance animate">{guess.dist}m</div>
+                    <div className="guess-distance animate">{guess.dist}km</div>
                     <div className="guess-direction animate">{guess.dir}</div>
                     {/* <div className="guess-result">{result}</div> */}
                     </>
@@ -201,7 +208,7 @@ function GuessBoxes({ todayCity }) {
                 <>
                     <input
                         id="text-field"
-                        className="text-field"
+                        className="rectangle text-field"
                         type="text"
                         placeholder="Enter or choose any capital city"
                         onFocus={handleInputFocus}
