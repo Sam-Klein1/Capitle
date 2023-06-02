@@ -237,12 +237,8 @@ export const capitalCities = [
   { city: 'Sanaa', country: 'Yemen', code: 'YE' },
   { city: 'Lusaka', country: 'Zambia', code: 'ZM' },
   { city: 'Harare', country: 'Zimbabwe', code: 'ZW' },
-  { city: 'N/A', country: 'Antarctica', code: 'AQ' },
   { city: 'North Nicosia', country: 'Northern Cyprus', code: 'NULL' },
-  { city: 'N/A', country: 'Hong Kong', code: 'HK' },
-  { city: 'N/A', country: 'Heard Island and McDonald Islands', code: 'HM' },
   { city: 'Diego Garcia', country: 'British Indian Ocean Territory', code: 'IO' },
-  { city: 'N/A', country: 'Macau', code: 'MO' },
   ];
 
   export function getRandomCity() {

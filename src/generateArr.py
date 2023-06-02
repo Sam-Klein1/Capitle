@@ -10,7 +10,7 @@ def build_array_from_json(file_path):
             country = entry['CountryName']
             code = entry['CountryCode']
             
-            data_array.append(f"{{ city: '{capital}', country: '{country}', code: '{code}' }},")
+            data_array.append(f"'{capital}', ")
         
         return data_array
 

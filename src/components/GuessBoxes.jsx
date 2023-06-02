@@ -93,7 +93,7 @@ function GuessBoxes({ todayCity }) {
     
     useEffect(() => {
         // Fetch city data from JSON file
-        fetch('/cityData.json')
+        fetch(process.env.PUBLIC_URL + '/cityData.json')
           .then((response) => response.json())
           .then((data) => setCityData(data))
           .catch((error) => console.error('Error fetching city data:', error));
@@ -116,7 +116,6 @@ function GuessBoxes({ todayCity }) {
         const src_cords = { latitude: getLatitude(src), longitude: getLongitude(src) };
         const actual_cords = { latitude: getLatitude(actual), longitude: getLongitude(actual) };
         const direction = geolib.getCompassDirection(src_cords, actual_cords);
-        console.log(direction);
 
         switch (direction) {
             case 'N':
