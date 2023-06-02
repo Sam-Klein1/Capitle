@@ -6,14 +6,42 @@ import '../css/suggestions.css';
 
 function GuessBoxes({ todayCity }) {
     const [showCityList, setShowCityList] = useState(false);
-    const [guesses, setGuesses] = useState(Array(6).fill({name: '', dist: 0, dir: '', code: ''})); // Initialize with an array of 6 empty strings
-    const [currentRectangleIndex, setCurrentRectangleIndex] = useState(0); // Initialize with index 0 for the first empty rectangle
+    const [guesses, setGuesses] = useState(() => {
+        const storedGuesses = localStorage.getItem('guesses');
+        return storedGuesses ? JSON.parse(storedGuesses) : Array(6).fill({ name: '', dist: 0, dir: '', code: '' });
+    });
+    const [currentRectangleIndex, setCurrentRectangleIndex] = useState(() => {
+        const storedIndex = localStorage.getItem('currentRectangleIndex');
+        return storedIndex ? parseInt(storedIndex) : 0;
+    });
     const [isGuessingDisabled, setIsGuessingDisabled] = useState(false);
     const [suggestionList, setSuggestionList] = useState(capitalCities);
     const [cityData, setCityData] = useState([]);
 
     const inputRef = useRef(null);
     const suggestionRef = useRef(null);
+
+    // Restoring previous guesses from local storage
+    useEffect(() => {
+        const storedGuesses = localStorage.getItem('guesses');
+        if (storedGuesses) {
+            setGuesses(JSON.parse(storedGuesses));
+        }
+
+        const storedIndex = localStorage.getItem('currentRectangleIndex');
+        if (storedIndex) {
+            setCurrentRectangleIndex(parseInt(storedIndex));
+        }
+    }, []);
+
+    // Saving guesses to local storage whenever they change
+    useEffect(() => {
+        localStorage.setItem('guesses', JSON.stringify(guesses));
+    }, [guesses]);
+
+    useEffect(() => {
+        localStorage.setItem('currentRectangleIndex', currentRectangleIndex.toString());
+    }, [currentRectangleIndex]);
 
     const handleInputFocus = () => {
         setShowCityList(true);
@@ -34,16 +62,34 @@ function GuessBoxes({ todayCity }) {
         setShowCityList(false);
         console.log(todayCity)
     };
+
+    const handleClickOutside = (event) => {
+        if (
+            inputRef.current &&
+            !inputRef.current.contains(event.target) &&
+            suggestionRef.current &&
+            !suggestionRef.current.contains(event.target)
+        ) {
+            setShowCityList(false);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('click', handleClickOutside);
+        return () => {
+            window.removeEventListener('click', handleClickOutside);
+        };
+    }, []);
     
-      const getLatitude = (city) => {
+    const getLatitude = (city) => {
         const foundCity = cityData.find((item) => item.CapitalName === city);
         return foundCity ? foundCity.CapitalLatitude : 0.0;
-      };
+    };
     
-      const getLongitude = (city) => {
+    const getLongitude = (city) => {
         const foundCity = cityData.find((item) => item.CapitalName === city);
         return foundCity ? foundCity.CapitalLongitude : 0.0;
-      };
+    };
     
     useEffect(() => {
         // Fetch city data from JSON file
@@ -104,20 +150,16 @@ function GuessBoxes({ todayCity }) {
 
     const getCode = (capitalName) => {
 
-        return capitalCities.find((city) => city.city === capitalName).code;
+        return capitalCities.find((city) => city.city.toLowerCase() === capitalName.toLowerCase()).code;
     };
-    
-    // const findDirection = (src, actual) => {
 
-    // };
-
+    //main game logic happens here
     const handleGuess = () => {
         
         const guess = document.getElementById("text-field").value;
         const distance = Math.floor(calculateDist(guess, todayCity));
         const direction = getDir(guess, todayCity);
-        const code = getCode(guess);
-
+        
         const isCityExists = capitalCities.some((city) =>
             city.city.toLowerCase() === guess.toLowerCase()
         );
@@ -126,6 +168,8 @@ function GuessBoxes({ todayCity }) {
             alert('The entered city does not exist.');
             return;
         }
+        
+        const code = getCode(guess);
 
         const updatedGuesses = [...guesses];
         updatedGuesses[currentRectangleIndex] = {
@@ -148,30 +192,12 @@ function GuessBoxes({ todayCity }) {
         }
         else if (nextRectangleIndex === guesses.length) {
             setTimeout(() => {
-                alert('You are out of guesses!');
+                alert("You are out of guesses!\n\nToday's city: " + todayCity);
             }, 1);
             setIsGuessingDisabled(true);
         }
 
     };
-
-    const handleClickOutside = (event) => {
-        if (
-            inputRef.current &&
-            !inputRef.current.contains(event.target) &&
-            suggestionRef.current &&
-            !suggestionRef.current.contains(event.target)
-        ) {
-            setShowCityList(false);
-        }
-    };
-
-    useEffect(() => {
-        window.addEventListener('click', handleClickOutside);
-        return () => {
-            window.removeEventListener('click', handleClickOutside);
-        };
-    }, []);
 
     
     return (
@@ -227,5 +253,4 @@ function GuessBoxes({ todayCity }) {
         </div>
     );
 }
-
 export default GuessBoxes;
