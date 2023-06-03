@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Capitle/static/css/main.c141e647.css",
-    "main.js": "/Capitle/static/js/main.b85a59fa.js",
+    "main.js": "/Capitle/static/js/main.1bab8f98.js",
     "static/js/787.e7c85ac7.chunk.js": "/Capitle/static/js/787.e7c85ac7.chunk.js",
     "static/media/default.jpg": "/Capitle/static/media/default.ff56211ce51e7cfd15ef.jpg",
     "static/media/Kingston.jpg": "/Capitle/static/media/Kingston.dae6e126b786524de7da.jpg",
@@ -225,11 +225,11 @@
     "static/media/Brazzaville.jpg": "/Capitle/static/media/Brazzaville.033ed311dddb0c90a949.jpg",
     "index.html": "/Capitle/index.html",
     "main.c141e647.css.map": "/Capitle/static/css/main.c141e647.css.map",
-    "main.b85a59fa.js.map": "/Capitle/static/js/main.b85a59fa.js.map",
+    "main.1bab8f98.js.map": "/Capitle/static/js/main.1bab8f98.js.map",
     "787.e7c85ac7.chunk.js.map": "/Capitle/static/js/787.e7c85ac7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c141e647.css",
-    "static/js/main.b85a59fa.js"
+    "static/js/main.1bab8f98.js"
   ]
 }
