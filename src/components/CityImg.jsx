@@ -12,14 +12,14 @@ function CityImg() {
 
     if (ChosenCity && lastChosenTime) {
       const elapsedTime = Date.now() - Number(lastChosenTime);
-      if (elapsedTime < 24 * 60 * 60 * 20000) {
+      if (elapsedTime < 24 * 60 * 60 * 1000) {
         setTodayCity(ChosenCity);
         return;
       }
     }
 
     chooseRandomCity(); // Choose a random city when the component mounts
-    const intervalId = setInterval(chooseRandomCity, 24 * 60 * 60 * 20000); // Repeat every 24 hours
+    const intervalId = setInterval(chooseRandomCity, 24 * 60 * 60 * 1000); // Repeat every 24 hours
 
     return () => {
       clearInterval(intervalId); // Clean up the interval when the component unmounts
