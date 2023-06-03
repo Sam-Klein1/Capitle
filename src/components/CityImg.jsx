@@ -18,16 +18,9 @@ function CityImg() {
       }
     }
 
-    chooseRandomCity(); // Choose a random city when the component mounts
-    const intervalId = setInterval(chooseRandomCity, 24 * 60 * 60 * 1000); // Repeat every 24 hours
-
-    return () => {
-      clearInterval(intervalId); // Clean up the interval when the component unmounts
-    };
-  }, []);
-
-  const chooseRandomCity = () => {
-    const randomIndex = Math.floor(Math.random() * capitalCities.length);
+    const currentDate = new Date();
+    const dayOfYear = getDayOfYear(currentDate);
+    const randomIndex = dayOfYear % capitalCities.length;
     const randomCity = capitalCities[randomIndex].city;
     setTodayCity(randomCity);
     // Reset the guesses array to empty
@@ -36,6 +29,13 @@ function CityImg() {
     localStorage.setItem('currentRectangleIndex', 0);
     localStorage.setItem('ChosenCity', randomCity);
     localStorage.setItem('lastChosenTime', Date.now());
+  }, []);
+
+  const getDayOfYear = (date) => {
+    const startOfYear = new Date(date.getFullYear(), 0, 0);
+    const diff = date - startOfYear;
+    const oneDay = 1000 * 60 * 60 * 24;
+    return Math.floor(diff / oneDay);
   };
 
   const getImageFilePath = (city) => {
