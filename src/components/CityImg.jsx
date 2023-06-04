@@ -13,6 +13,7 @@ function CityImg() {
     if (ChosenCity && lastChosenTime) {
       const elapsedTime = Date.now() - Number(lastChosenTime);
       if (elapsedTime < 24 * 60 * 60 * 1000) {
+        localStorage.removeItem('guesses'); 
         setTodayCity(ChosenCity);
         return;
       }
