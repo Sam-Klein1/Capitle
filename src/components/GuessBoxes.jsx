@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { toast } from 'react-toastify';
 import * as geolib from 'geolib';
 import { capitalCities } from '../cities.js';
 import '../css/GuessBoxes.css';
 import '../css/suggestions.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 function GuessBoxes({ todayCity }) {
     const [showCityList, setShowCityList] = useState(false);
@@ -163,8 +165,27 @@ function GuessBoxes({ todayCity }) {
             city.city.toLowerCase() === guess.toLowerCase()
         );
 
+        const isCityGuessed = guesses.some((city) => 
+            city.name.toLowerCase() === guess.toLowerCase()
+        );
+
         if (!isCityExists) {
-            alert('The entered city does not exist.');
+            toast.error('Cannot find city.', {
+                autoClose: 1300,
+                closeButton: false,
+                hideProgressBar: true,
+                position: toast.POSITION.TOP_CENTER,
+            })
+            return;
+        }
+
+        if(isCityGuessed) {
+            toast.error('City has already been guessed. Try again.', {
+                autoClose: 2500,
+                closeButton: false,
+                hideProgressBar: true,
+                position: toast.POSITION.TOP_CENTER,
+            })
             return;
         }
         
