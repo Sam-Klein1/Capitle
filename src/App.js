@@ -4,8 +4,14 @@ import './App.css';
 import CityImg from './components/CityImg'
 import Title from './components/Title';
 
-// localStorage.removeItem('guesses')
-// localStorage.removeItem('currentRectangleIndex');
+const date = localStorage.getItem('time-guess');
+const yr = new Date().getUTCFullYear();
+const mm = new Date().getUTCMonth();
+const dd = new Date().getUTCDay();
+const curr = `${mm}-${dd}-${yr}`;
+if (!(date === curr)) {
+  localStorage.clear();
+}
 
 function App() {
   return (

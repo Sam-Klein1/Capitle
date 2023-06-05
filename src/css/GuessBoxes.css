@@ -80,7 +80,7 @@ button {
   width: 150px; /* Set the desired width */
   height: 15px; /* Set the desired height */
   background-color: lightgray; /* Set the background color of the progress bar */
-  border-radius: 2px; /* Add rounded corners to the progress bar */
+  border-radius: 10px; /* Add rounded corners to the progress bar */
   overflow: hidden; /* Hide the overflowing part of the fill */
   margin-left: 40px;
 }
