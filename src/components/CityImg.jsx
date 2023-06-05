@@ -7,15 +7,18 @@ function CityImg() {
   const [todayCity, setTodayCity] = useState('');
 
   useEffect(() => {
-    const ChosenCity = localStorage.getItem('ChosenCity');
-    const lastChosenTime = localStorage.getItem('lastChosenTime');
 
-    if (ChosenCity && lastChosenTime) {
-      const elapsedTime = Date.now() - Number(lastChosenTime);
-      if (elapsedTime < 24 * 60 * 60 * 1000) { 
-        setTodayCity(ChosenCity);
-        return;
-      }
+    const date = localStorage.getItem('time-guess');
+    const yr = new Date().getUTCFullYear();
+    const mm = new Date().getUTCMonth();
+    const dd = new Date().getUTCDay();
+    const curr = `${mm}-${dd}-${yr}`;
+    if (!(date === curr)) {
+      const currentDate = new Date();
+      const dayOfYear = getDayOfYear(currentDate);
+      const randomIndex = dayOfYear % capitalCities.length;
+      const randomCity = capitalCities[randomIndex].city;
+      setTodayCity(randomCity);
     }
 
     const currentDate = new Date();
@@ -23,9 +26,6 @@ function CityImg() {
     const randomIndex = dayOfYear % capitalCities.length;
     const randomCity = capitalCities[randomIndex].city;
     setTodayCity(randomCity);
-    // Reset the guesses array to empty
-    localStorage.setItem('ChosenCity', randomCity);
-    localStorage.setItem('lastChosenTime', Date.now());
   }, []);
 
   const getDayOfYear = (date) => {
