@@ -10,7 +10,7 @@ function GuessBoxes({ todayCity }) {
     const [showCityList, setShowCityList] = useState(false);
     const [guesses, setGuesses] = useState(() => {
         const storedGuesses = localStorage.getItem('guesses');
-        return storedGuesses ? JSON.parse(storedGuesses) : Array(6).fill({ name: '', dist: 0, dir: '', code: '' });
+        return storedGuesses ? JSON.parse(storedGuesses) : Array(6).fill({ name: '', progress: 0, dist: 0, dir: ''});
     });
     const [currentRectangleIndex, setCurrentRectangleIndex] = useState(() => {
         const storedIndex = localStorage.getItem('currentRectangleIndex');
@@ -19,7 +19,6 @@ function GuessBoxes({ todayCity }) {
     const [isGuessingDisabled, setIsGuessingDisabled] = useState(false);
     const [suggestionList, setSuggestionList] = useState(capitalCities);
     const [cityData, setCityData] = useState([]);
-
     const inputRef = useRef(null);
     const suggestionRef = useRef(null);
 
@@ -107,7 +106,7 @@ function GuessBoxes({ todayCity }) {
         const actual_cords = { latitude: getLatitude(actual), longitude: getLongitude(actual) };
         const dist = geolib.getDistance(src_cords, actual_cords);
 
-        return dist/1000;
+        return dist/1000; //gives distance between src and actual in KM
     };
 
     const getDir = (src, actual) => {
@@ -149,17 +148,21 @@ function GuessBoxes({ todayCity }) {
           }          
     }
 
-    const getCode = (capitalName) => {
+    const calculatePercent = (distance) => {
 
-        return capitalCities.find((city) => city.city.toLowerCase() === capitalName.toLowerCase()).code;
-    };
+        let MAX_DISTANCE = 20000; //in km
+        return Math.floor(((MAX_DISTANCE - distance)/MAX_DISTANCE) * 100);
+    }
 
     //main game logic happens here
     const handleGuess = () => {
         
+        //build our "guess"
         const guess = document.getElementById("text-field").value;
         const distance = Math.floor(calculateDist(guess, todayCity));
         const direction = getDir(guess, todayCity);
+        const prog = calculatePercent(distance);
+        //
         
         const isCityExists = capitalCities.some((city) =>
             city.city.toLowerCase() === guess.toLowerCase()
@@ -188,15 +191,13 @@ function GuessBoxes({ todayCity }) {
             })
             return;
         }
-        
-        const code = getCode(guess);
 
         const updatedGuesses = [...guesses];
         updatedGuesses[currentRectangleIndex] = {
             name: guess,
             dist: distance,
             dir: direction,
-            code: code,
+            progress: prog,
         };
         setGuesses(updatedGuesses);
         const nextRectangleIndex = currentRectangleIndex + 1;
@@ -242,12 +243,14 @@ function GuessBoxes({ todayCity }) {
                         guess.name ? (guess.name.toLowerCase() === todayCity.toLowerCase() ? 'correct' : 'incorrect') : ''}`}
                 >
                 {guess.name && (
-                    <>
-                    <div className="guess-name animate">{guess.name}</div>
-                    <div className="guess-distance animate">{guess.dist}km</div>
-                    <div className="guess-direction animate">{guess.dir}</div>
-                    {/* <div className="guess-result">{result}</div> */}
-                    </>
+                    <div className='guess'>
+                        <div className="guess-name animate">{guess.name}</div>
+                        <div className="guess-progress animate">
+                            <div className ="fill" style={{ "--progress-width": `${guess.progress}%` }}></div>
+                        </div>
+                        <div className="guess-distance animate">{guess.dist}km</div>
+                        <div className="guess-direction animate">{guess.dir}</div>
+                    </div>
                 )}
                 </div>
             ))}
