@@ -53,7 +53,6 @@ button {
   }
 }
 
-
 .guess {
   display: flex;
   align-items: center;
@@ -74,6 +73,7 @@ button {
   animation-name: fadeIn;
 }
 .guess-progress {
+  position: relative;
   border: solid 1px black;
   animation-delay: 0.4s;
   animation-name: fadeIn;
@@ -82,19 +82,28 @@ button {
   background-color: lightgray; /* Set the background color of the progress bar */
   border-radius: 10px; /* Add rounded corners to the progress bar */
   overflow: hidden; /* Hide the overflowing part of the fill */
-  margin-left: 40px;
+  /* margin-left: 40px; */
 }
 .fill{
   width: 0%;
   height: 100%;
-  background-color: rgb(0, 0, 255); /* Set the color of the fill */
+  font-size: 13px;
+  font-weight: bold;
+  background-color: rgb(37, 171, 255); /* Set the color of the fill */
   animation-duration: 0.7s;
   animation-fill-mode: forwards;
   animation-name: fillProgressBar;
   animation-delay: 0.4s;
   animation-timing-function: ease-in-out;
 }
-
+.count-up-overlay{
+  position: absolute;
+  font-size: 13px;
+  font-weight: bolder;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
 .guess-distance{
   text-align: center;
   animation-delay: 0.6s;
@@ -107,8 +116,6 @@ button {
   animation-name: fadeIn;
   font-size: 25px;
 }
-
-
 
 .rectangle.correct {
   width: 97%;

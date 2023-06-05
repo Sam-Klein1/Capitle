@@ -5,6 +5,7 @@ import { capitalCities } from '../cities.js';
 import '../css/GuessBoxes.css';
 import '../css/suggestions.css';
 import 'react-toastify/dist/ReactToastify.css';
+import CountUp from './CountUp.jsx';
 
 function GuessBoxes({ todayCity }) {
     const [showCityList, setShowCityList] = useState(false);
@@ -252,6 +253,9 @@ function GuessBoxes({ todayCity }) {
                         <div className="guess-name animate">{guess.name}</div>
                         <div className="guess-progress animate">
                             <div className ="fill" style={{ "--progress-width": `${guess.progress}%` }}></div>
+                            <div className="count-up-overlay">
+                                <CountUp finalNumber={guess.progress} />
+                            </div>
                         </div>
                         <div className="guess-distance animate">{guess.dist}km</div>
                         <div className="guess-direction animate">{guess.dir}</div>
