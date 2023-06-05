@@ -12,8 +12,7 @@ function CityImg() {
 
     if (ChosenCity && lastChosenTime) {
       const elapsedTime = Date.now() - Number(lastChosenTime);
-      if (elapsedTime < 24 * 60 * 60 * 1000) {
-        localStorage.removeItem('guesses'); 
+      if (elapsedTime < 24 * 60 * 60 * 1000) { 
         setTodayCity(ChosenCity);
         return;
       }
@@ -25,9 +24,6 @@ function CityImg() {
     const randomCity = capitalCities[randomIndex].city;
     setTodayCity(randomCity);
     // Reset the guesses array to empty
-    localStorage.setItem('guesses', JSON.stringify(Array(6).fill({ name: '', dist: 0, dir: '', code: '' })));
-    // Reset the currentRectangleIndex to 0
-    localStorage.setItem('currentRectangleIndex', 0);
     localStorage.setItem('ChosenCity', randomCity);
     localStorage.setItem('lastChosenTime', Date.now());
   }, []);
