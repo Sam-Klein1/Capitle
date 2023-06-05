@@ -16,7 +16,7 @@ function CountUp({ finalNumber }) {
         clearInterval(interval);
       }
       countRef.current.textContent = Math.floor(currentCount) + '%';
-    }, 15);
+    }, 11);
 
     return () => clearInterval(interval);
   }, [finalNumber]);
