@@ -43,29 +43,72 @@ button {
   }
 }
 
-.guess-name{
 
-  flex: .4;
+@keyframes fillProgressBar {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: var(--progress-width, 0%);
+  }
+}
+
+
+.guess {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%; /* Adjust the width as needed */
+  height: 100px; /* Set the desired height */
+}
+
+.guess-name,
+.guess-progress,
+.guess-distance,
+.guess-direction {
+  flex: 1;
+}
+.guess-name{
   text-align: left;
   animation-delay: 0.2s;
   animation-name: fadeIn;
-  overflow-wrap: break-word;
-  
+}
+.guess-progress {
+  border: solid 1px black;
+  animation-delay: 0.4s;
+  animation-name: fadeIn;
+  width: 150px; /* Set the desired width */
+  height: 15px; /* Set the desired height */
+  background-color: lightgray; /* Set the background color of the progress bar */
+  border-radius: 2px; /* Add rounded corners to the progress bar */
+  overflow: hidden; /* Hide the overflowing part of the fill */
+  margin-left: 40px;
+}
+.fill{
+  width: 0%;
+  height: 100%;
+  background-color: rgb(0, 0, 255); /* Set the color of the fill */
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+  animation-name: fillProgressBar;
+  animation-delay: 0.4s;
+  animation-timing-function: ease-in-out;
 }
 
 .guess-distance{
   text-align: center;
-  animation-delay: 0.4s;
+  animation-delay: 0.6s;
   animation-name: fadeIn;
-  margin-right: 43px;
+  margin-left: 40px;
 }
 .guess-direction{
   text-align: center;
-  animation-delay: 0.6s;
+  animation-delay: 0.8s;
   animation-name: fadeIn;
   font-size: 25px;
-  margin-right: 15px;
 }
+
+
 
 .rectangle.correct {
   width: 97%;
