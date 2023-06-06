@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef} from 'react';
 import { toast } from 'react-toastify';
 import * as geolib from 'geolib';
 import { capitalCities } from '../cities.js';
@@ -8,10 +8,11 @@ import 'react-toastify/dist/ReactToastify.css';
 import CountUp from './CountUp.jsx';
 
 function GuessBoxes({ todayCity }) {
+    const distanceUnit = localStorage.getItem('distanceUnit');
     const [showCityList, setShowCityList] = useState(false);
     const [guesses, setGuesses] = useState(() => {
         const storedGuesses = localStorage.getItem('guesses');
-        return storedGuesses ? JSON.parse(storedGuesses) : Array(6).fill({ name: '', progress: 0, dist: 0, dir: ''});
+        return storedGuesses ? JSON.parse(storedGuesses) : Array(6).fill({ name: '', progress: 0, dist: 0, unit: '', dir: ''});
     });
     const [currentRectangleIndex, setCurrentRectangleIndex] = useState(() => {
         const storedIndex = localStorage.getItem('currentRectangleIndex');
@@ -165,7 +166,10 @@ function GuessBoxes({ todayCity }) {
 
         //build our "guess"
         const guess = document.getElementById("text-field").value;
-        const distance = Math.floor(calculateDist(guess, todayCity));
+        let distance = Math.floor(calculateDist(guess, todayCity));
+        if(distanceUnit === 'mi'){
+            distance = Math.floor(distance * 0.621371);
+        }
         const direction = getDir(guess, todayCity);
         const prog = calculatePercent(distance);
         //
@@ -203,6 +207,7 @@ function GuessBoxes({ todayCity }) {
             name: guess,
             dist: distance,
             dir: direction,
+            unit: distanceUnit,
             progress: prog,
         };
         setGuesses(updatedGuesses);
@@ -257,7 +262,7 @@ function GuessBoxes({ todayCity }) {
                                 <CountUp finalNumber={guess.progress} />
                             </div>
                         </div>
-                        <div className="guess-distance animate">{guess.dist}km</div>
+                        <div className="guess-distance animate">{guess.dist}{guess.unit}</div>
                         <div className="guess-direction animate">{guess.dir}</div>
                     </div>
                 )}

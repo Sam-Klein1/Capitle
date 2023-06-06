@@ -1,4 +1,5 @@
 .header-content {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,10 +14,99 @@
     overflow: hidden;
 }
 
-.pic{
+.about-pic{
     width: 30px;
     height: 30px;
 }
+
+.settings{
+  background: none;
+  border: none;
+}
+.settings-pic{
+    width: 30px;
+    height: 30px;
+    
+}
+
+.popup-menu{
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 250px;
+  width: 250px;
+  background-color: white;
+  opacity: 80%;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  padding: 10px;
+}
+.exit-popup{
+  border: none;
+  background: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 20px;
+}
+
+.toggle-switch {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(147, 147, 147);
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: black;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: rgb(147, 147, 147);
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+.toggle-label {
+  margin-left: 10px;
+}
+
 
 h1{
     text-align: center;
