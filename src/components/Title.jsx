@@ -3,9 +3,19 @@ import '../css/header.css';
 
 function Title() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [infoOpen, setinfoOpen] = useState(false);
     const toggleMenu = () => {
+      if (infoOpen) {
+        toggleInfo();
+      }
       setMenuOpen(!menuOpen);
     };
+    const toggleInfo = () => {
+        if (menuOpen) {
+            toggleMenu();
+        }
+        setinfoOpen(!infoOpen);
+      };
   
     const [unitToggle, setUnitToggle] = useState(false);
     const [themeToggle, setThemeToggle] = useState(false);
@@ -33,20 +43,31 @@ function Title() {
   return (
     <div className="header">
       <header className="header-content">
-        <a
-          className="about-button"
-          href={require("../")}
-        >
+        <button
+          className="about"
+          onClick={toggleInfo}>
           <img
             src={require("../assets/about.png")}
             alt=""
             className="about-pic"
           />
-        </a>
+        </button>
+        {infoOpen && (
+            <div className="popup-menu">
+                <button className="exit-popup" onClick={toggleInfo}>
+                  {"\u2573"}
+                </button>
+            <div className="info-title">HOW TO PLAY?</div>
+            <div className="desc">Step 1: Make a guess</div>
+
+            </div>
+        )}
         <h1>
           CAPIT<span className="green">LE</span>!{" "}
         </h1>
-        <button className="settings" onClick={toggleMenu}>
+        <button 
+            className="settings" 
+            onClick={toggleMenu}>
           <img
             src={require("../assets/settings.png")}
             alt=""
