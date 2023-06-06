@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Capitle/static/css/main.e160d5e2.css",
-    "main.js": "/Capitle/static/js/main.b90a2372.js",
+    "main.css": "/Capitle/static/css/main.07c74924.css",
+    "main.js": "/Capitle/static/js/main.5cf1aa85.js",
     "static/js/787.e7c85ac7.chunk.js": "/Capitle/static/js/787.e7c85ac7.chunk.js",
     "static/media/default.jpg": "/Capitle/static/media/default.ff56211ce51e7cfd15ef.jpg",
     "static/media/Kingston.jpg": "/Capitle/static/media/Kingston.dae6e126b786524de7da.jpg",
@@ -39,6 +39,7 @@
     "static/media/Sarajevo.jpg": "/Capitle/static/media/Sarajevo.3af8664130ff2e95107b.jpg",
     "static/media/Antananarivo.jpg": "/Capitle/static/media/Antananarivo.4ed1f4eaa1d1b182c1f6.jpg",
     "static/media/Tunis.jpg": "/Capitle/static/media/Tunis.8457b7a66ce4c7111359.jpg",
+    "static/media/Niamey.jpg": "/Capitle/static/media/Niamey.5cd96e184400ed5d146a.jpg",
     "static/media/Wellington.jpg": "/Capitle/static/media/Wellington.6ab6deff5698864caa96.jpg",
     "static/media/Kinshasa.jpg": "/Capitle/static/media/Kinshasa.61791259be0a2c38a559.jpg",
     "static/media/Monaco.jpg": "/Capitle/static/media/Monaco.57559c6a7b46ef00f136.jpg",
@@ -219,17 +220,17 @@
     "static/media/Funafuti.jpg": "/Capitle/static/media/Funafuti.8d927cdfd72ebbc1b246.jpg",
     "static/media/Pyongyang.jpg": "/Capitle/static/media/Pyongyang.a4fb5372e09a75a77b55.jpg",
     "static/media/Zagreb.jpg": "/Capitle/static/media/Zagreb.e8fe899e8fb6c87c5de4.jpg",
-    "static/media/Niamey.jpg": "/Capitle/static/media/Niamey.461be3ef073b39ed6611.jpg",
     "static/media/Yerevan.jpg": "/Capitle/static/media/Yerevan.da63fde3c8fae7864b8a.jpg",
     "static/media/Male.jpg": "/Capitle/static/media/Male.23bcf2749dbf93d35822.jpg",
+    "static/media/settings.png": "/Capitle/static/media/settings.af5b2c2944129b199aa3.png",
     "static/media/Brazzaville.jpg": "/Capitle/static/media/Brazzaville.033ed311dddb0c90a949.jpg",
     "index.html": "/Capitle/index.html",
-    "main.e160d5e2.css.map": "/Capitle/static/css/main.e160d5e2.css.map",
-    "main.b90a2372.js.map": "/Capitle/static/js/main.b90a2372.js.map",
+    "main.07c74924.css.map": "/Capitle/static/css/main.07c74924.css.map",
+    "main.5cf1aa85.js.map": "/Capitle/static/js/main.5cf1aa85.js.map",
     "787.e7c85ac7.chunk.js.map": "/Capitle/static/js/787.e7c85ac7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e160d5e2.css",
-    "static/js/main.b90a2372.js"
+    "static/css/main.07c74924.css",
+    "static/js/main.5cf1aa85.js"
   ]
 }
