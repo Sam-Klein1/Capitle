@@ -6,7 +6,7 @@ function CountUp({ finalNumber }) {
   useEffect(() => {
     const startCount = 0;
     const duration = 1000; // Animation duration in milliseconds
-    const increment = finalNumber / (duration / 10); // Increment value per 10 milliseconds
+    const increment = finalNumber / (duration / 25); // Increment value per 10 milliseconds
 
     let currentCount = startCount;
     const interval = setInterval(() => {
@@ -16,7 +16,7 @@ function CountUp({ finalNumber }) {
         clearInterval(interval);
       }
       countRef.current.textContent = Math.floor(currentCount) + '%';
-    }, 11);
+    }, 25);
 
     return () => clearInterval(interval);
   }, [finalNumber]);
