@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/Capitle/static/css/main.d5f6404d.css",
-    "main.js": "/Capitle/static/js/main.7926674a.js",
+    "main.css": "/Capitle/static/css/main.1c15c08a.css",
+    "main.js": "/Capitle/static/js/main.d26de195.js",
     "static/js/787.e7c85ac7.chunk.js": "/Capitle/static/js/787.e7c85ac7.chunk.js",
+    "static/media/Abuja.jpg": "/Capitle/static/media/Abuja.79a78e41b2a15bc1cd7f.jpg",
     "static/media/default.jpg": "/Capitle/static/media/default.ff56211ce51e7cfd15ef.jpg",
     "static/media/Kingston.jpg": "/Capitle/static/media/Kingston.dae6e126b786524de7da.jpg",
     "static/media/Bucharest.jpg": "/Capitle/static/media/Bucharest.a0c8b665a45ba9d3ffab.jpg",
@@ -188,7 +189,6 @@
     "static/media/Dili.jpg": "/Capitle/static/media/Dili.5e782a69eca8fd0b6bd3.jpg",
     "static/media/Berlin.jpg": "/Capitle/static/media/Berlin.87f50250986086ab5142.jpg",
     "static/media/Beijing.jpg": "/Capitle/static/media/Beijing.015fb4e08a9264131a1a.jpg",
-    "static/media/Abuja.jpg": "/Capitle/static/media/Abuja.8701e221408d59629e70.jpg",
     "static/media/Saint Peter Port.jpg": "/Capitle/static/media/Saint Peter Port.d8b530442ac381179467.jpg",
     "static/media/Skopje.jpg": "/Capitle/static/media/Skopje.aff3b313b98df92f7be9.jpg",
     "static/media/Conakry.jpg": "/Capitle/static/media/Conakry.42fc57f9e446e70156a4.jpg",
@@ -225,12 +225,12 @@
     "static/media/settings.png": "/Capitle/static/media/settings.af5b2c2944129b199aa3.png",
     "static/media/Brazzaville.jpg": "/Capitle/static/media/Brazzaville.033ed311dddb0c90a949.jpg",
     "index.html": "/Capitle/index.html",
-    "main.d5f6404d.css.map": "/Capitle/static/css/main.d5f6404d.css.map",
-    "main.7926674a.js.map": "/Capitle/static/js/main.7926674a.js.map",
+    "main.1c15c08a.css.map": "/Capitle/static/css/main.1c15c08a.css.map",
+    "main.d26de195.js.map": "/Capitle/static/js/main.d26de195.js.map",
     "787.e7c85ac7.chunk.js.map": "/Capitle/static/js/787.e7c85ac7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d5f6404d.css",
-    "static/js/main.7926674a.js"
+    "static/css/main.1c15c08a.css",
+    "static/js/main.d26de195.js"
   ]
 }
