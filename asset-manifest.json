@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Capitle/static/css/main.1c15c08a.css",
-    "main.js": "/Capitle/static/js/main.d26de195.js",
+    "main.js": "/Capitle/static/js/main.2597c01d.js",
     "static/js/787.e7c85ac7.chunk.js": "/Capitle/static/js/787.e7c85ac7.chunk.js",
     "static/media/Abuja.jpg": "/Capitle/static/media/Abuja.79a78e41b2a15bc1cd7f.jpg",
     "static/media/default.jpg": "/Capitle/static/media/default.ff56211ce51e7cfd15ef.jpg",
@@ -192,6 +192,7 @@
     "static/media/Saint Peter Port.jpg": "/Capitle/static/media/Saint Peter Port.d8b530442ac381179467.jpg",
     "static/media/Skopje.jpg": "/Capitle/static/media/Skopje.aff3b313b98df92f7be9.jpg",
     "static/media/Conakry.jpg": "/Capitle/static/media/Conakry.42fc57f9e446e70156a4.jpg",
+    "static/media/Alofi.jpg": "/Capitle/static/media/Alofi.d06ca5096cf4393f89a9.jpg",
     "static/media/Bangui.jpg": "/Capitle/static/media/Bangui.933b0fe8b66505f36523.jpg",
     "static/media/Doha.jpg": "/Capitle/static/media/Doha.8c3e368a87a55e05aa11.jpg",
     "static/media/Basseterre.jpg": "/Capitle/static/media/Basseterre.7b6502db4a562801ffe6.jpg",
@@ -226,11 +227,11 @@
     "static/media/Brazzaville.jpg": "/Capitle/static/media/Brazzaville.033ed311dddb0c90a949.jpg",
     "index.html": "/Capitle/index.html",
     "main.1c15c08a.css.map": "/Capitle/static/css/main.1c15c08a.css.map",
-    "main.d26de195.js.map": "/Capitle/static/js/main.d26de195.js.map",
+    "main.2597c01d.js.map": "/Capitle/static/js/main.2597c01d.js.map",
     "787.e7c85ac7.chunk.js.map": "/Capitle/static/js/787.e7c85ac7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1c15c08a.css",
-    "static/js/main.d26de195.js"
+    "static/js/main.2597c01d.js"
   ]
 }
