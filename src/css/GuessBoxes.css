@@ -74,7 +74,8 @@ button {
   animation-name: fadeIn;
 }
 .guess-code{
-  margin-left: 20px;
+  flex: .5;
+  font-size: 12px;
   text-align: left;
   animation-delay: 0.2s;
   animation-name: fadeIn;

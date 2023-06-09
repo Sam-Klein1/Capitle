@@ -1,6 +1,6 @@
 export const capitalCities = [
   { city: 'Hargeisa', country: 'Somaliland', code: '' },
-  { city: 'King Edward Point', country: 'South Georgia and South Sandwich Islands', code: 'GS' },
+  { city: 'K. E. Point', country: 'South Georgia and South Sandwich Islands', code: 'GS' },
   { city: 'Port-aux-FranÃ§ais', country: 'French Southern and Antarctic Lands', code: 'TF' },
   { city: 'Mariehamn', country: 'Aland Islands', code: 'AX' },
   { city: 'Yaren', country: 'Nauru', code: 'NR' },
