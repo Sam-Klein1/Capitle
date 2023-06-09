@@ -69,11 +69,14 @@ button {
   flex: 1;
 }
 .guess-name{
+  font-weight: bold;
+  font-size: 14px;
   text-align: left;
   animation-delay: 0.2s;
   animation-name: fadeIn;
 }
 .guess-code{
+  margin-left: 10px;
   flex: .5;
   font-size: 12px;
   text-align: left;
@@ -116,7 +119,7 @@ button {
   text-align: center;
   animation-delay: 0.6s;
   animation-name: fadeIn;
-  margin-left: 40px;
+  margin-left: 20px;
 }
 .guess-direction{
   text-align: center;
@@ -181,6 +184,9 @@ button {
   .guess-button {
     /* Mobile styles */
     width: 99.5%; /* Adjust the width as needed */
+  }
+  .guess-name{
+    flex: 1.2;
   }
 
   .text-field {
