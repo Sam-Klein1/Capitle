@@ -27,6 +27,7 @@ function GuessBoxes({ todayCity }) {
 
     // Restoring previous guesses from local storage
     useEffect(() => {
+        setIsGuessingDisabled(localStorage.getItem("isGuessingDisabled"));
         const storedGuesses = localStorage.getItem('guesses');
         if (storedGuesses) {
             setGuesses(JSON.parse(storedGuesses));
@@ -221,16 +222,17 @@ function GuessBoxes({ todayCity }) {
         if (guess.toLowerCase() === todayCity.toLowerCase()) {
             setTimeout(() => {
                 alert('You guessed right!');
-            }, 1);
-            setIsGuessingDisabled(true);
+            }, 1200);
+            localStorage.setItem("isGuessingDisabled", true);
+            setIsGuessingDisabled(localStorage.getItem("isGuessingDisabled"));
         }
         else if (nextRectangleIndex === guesses.length) {
             setTimeout(() => {
                 alert("You are out of guesses!\n\nToday's city: " + todayCity);
-            }, 1);
-            setIsGuessingDisabled(true);
+            }, 1200);
+            localStorage.setItem("isGuessingDisabled", true);
+            setIsGuessingDisabled(localStorage.getItem("isGuessingDisabled"));
         }
-
     };
 
     

@@ -63,7 +63,7 @@ function Title() {
             </div>
         )}
         <h1>
-          CAPIT<span className="green">LE</span>!{" "}
+          🏙 CAPIT<span className="green">LE</span>!{" "}
         </h1>
         <button 
             className="settings" 
