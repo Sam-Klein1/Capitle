@@ -1,5 +1,5 @@
 export const capitalCities = [
-  { city: 'Hargeisa', country: 'Somaliland', code: 'NULL' },
+  { city: 'Hargeisa', country: 'Somaliland', code: '' },
   { city: 'King Edward Point', country: 'South Georgia and South Sandwich Islands', code: 'GS' },
   { city: 'Port-aux-FranÃ§ais', country: 'French Southern and Antarctic Lands', code: 'TF' },
   { city: 'Mariehamn', country: 'Aland Islands', code: 'AX' },
@@ -237,7 +237,7 @@ export const capitalCities = [
   { city: 'Sanaa', country: 'Yemen', code: 'YE' },
   { city: 'Lusaka', country: 'Zambia', code: 'ZM' },
   { city: 'Harare', country: 'Zimbabwe', code: 'ZW' },
-  { city: 'North Nicosia', country: 'Northern Cyprus', code: 'NULL' },
+  { city: 'North Nicosia', country: 'Northern Cyprus', code: '' },
   { city: 'Diego Garcia', country: 'British Indian Ocean Territory', code: 'IO' },
   ];
 

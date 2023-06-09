@@ -12,7 +12,7 @@ function GuessBoxes({ todayCity }) {
     const [showCityList, setShowCityList] = useState(false);
     const [guesses, setGuesses] = useState(() => {
         const storedGuesses = localStorage.getItem('guesses');
-        return storedGuesses ? JSON.parse(storedGuesses) : Array(6).fill({ name: '', progress: 0, dist: 0, unit: '', dir: ''});
+        return storedGuesses ? JSON.parse(storedGuesses) : Array(6).fill({ name: '', cc: '', progress: 0, dist: 0, unit: '', dir: ''});
     });
     const [currentRectangleIndex, setCurrentRectangleIndex] = useState(() => {
         const storedIndex = localStorage.getItem('currentRectangleIndex');
@@ -23,6 +23,7 @@ function GuessBoxes({ todayCity }) {
     const [cityData, setCityData] = useState([]);
     const inputRef = useRef(null);
     const suggestionRef = useRef(null);
+    const [code, setCode] = useState("");
 
     // Restoring previous guesses from local storage
     useEffect(() => {
@@ -60,10 +61,10 @@ function GuessBoxes({ todayCity }) {
         setSuggestionList(filteredCities);
     };
 
-    const handleCitySelection = (city) => {
+    const handleCitySelection = (city, cc) => {
         document.getElementById("text-field").value = city;
+        setCode(cc);
         setShowCityList(false);
-        console.log(todayCity)
     };
 
     const handleClickOutside = (event) => {
@@ -205,6 +206,7 @@ function GuessBoxes({ todayCity }) {
         const updatedGuesses = [...guesses];
         updatedGuesses[currentRectangleIndex] = {
             name: guess,
+            code: code,
             dist: distance,
             dir: direction,
             unit: distanceUnit,
@@ -240,7 +242,7 @@ function GuessBoxes({ todayCity }) {
                         <button
                             key={index}
                             className="suggestion-button"
-                            onClick={() => handleCitySelection(city.city)}
+                            onClick={() => handleCitySelection(city.city, city.code)}
                         >
                             <span className="city">{city.city}</span>, {city.country}
                         </button>
@@ -256,6 +258,7 @@ function GuessBoxes({ todayCity }) {
                 {guess.name && (
                     <div className='guess'>
                         <div className="guess-name animate">{guess.name}</div>
+                        <div className="guess-code animate">{guess.code}</div>
                         <div className="guess-progress animate">
                             <div className ="fill" style={{ "--progress-width": `${guess.progress}%` }}></div>
                             <div className="count-up-overlay">

@@ -62,12 +62,19 @@ button {
 }
 
 .guess-name,
+.guess-code,
 .guess-progress,
 .guess-distance,
 .guess-direction {
   flex: 1;
 }
 .guess-name{
+  text-align: left;
+  animation-delay: 0.2s;
+  animation-name: fadeIn;
+}
+.guess-code{
+  margin-left: 20px;
   text-align: left;
   animation-delay: 0.2s;
   animation-name: fadeIn;
@@ -82,7 +89,7 @@ button {
   background-color: lightgray; /* Set the background color of the progress bar */
   border-radius: 10px; /* Add rounded corners to the progress bar */
   overflow: hidden; /* Hide the overflowing part of the fill */
-  margin-left: 40px; 
+  /* margin-left: 10px;  */
 }
 .fill{
   width: 0%;
