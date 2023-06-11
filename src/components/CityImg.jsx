@@ -18,19 +18,6 @@ function CityImg() {
   
   useEffect(() => {
 
-    // const date = localStorage.getItem('time-guess');
-    // const yr = new Date().getUTCFullYear();
-    // const mm = new Date().getUTCMonth();
-    // const dd = new Date().getUTCDay();
-    // const curr = `${mm}-${dd}-${yr}`;
-    // if (!(date === curr)) {
-    //   const currentDate = new Date();
-    //   const dayOfYear = getDayOfYear(currentDate);
-    //   const randomIndex = dayOfYear % capitalCities.length;
-    //   const randomCity = capitalCities[randomIndex].city;
-    //   setTodayCity(randomCity);
-    // }
-
     const currentDate = new Date();
     const dayOfYear = getDayOfYear(currentDate);
     const randomIndex = dayOfYear % capitalCities.length;

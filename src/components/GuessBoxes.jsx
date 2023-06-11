@@ -76,6 +76,7 @@ function GuessBoxes({ todayCity }) {
             !suggestionRef.current.contains(event.target)
         ) {
             setShowCityList(false);
+
         }
     };
 
@@ -161,11 +162,6 @@ function GuessBoxes({ todayCity }) {
     //main game logic happens here
     const handleGuess = () => {
         
-        const yr = new Date().getUTCFullYear();
-        const mm = new Date().getUTCMonth();
-        const dd = new Date().getUTCDay();
-        localStorage.setItem('time-guess', `${mm}-${dd}-${yr}`);
-
         //build our "guess"
         const guess = document.getElementById("text-field").value;
         let distance = Math.floor(calculateDist(guess, todayCity));

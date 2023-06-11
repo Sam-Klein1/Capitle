@@ -11,7 +11,9 @@ function Timer() {
         const timeRemaining = endOfDay - now /*- 40000000 - 8000000*/;
 
         if (timeRemaining <= 0) {
-            localStorage.clear();
+            localStorage.removeItem('todayCity');
+            localStorage.removeItem('guesses');
+            localStorage.removeItem('currentRectangleIndex');
             window.location.reload();
         }
   
