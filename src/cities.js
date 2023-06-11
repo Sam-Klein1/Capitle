@@ -50,7 +50,6 @@ export const capitalCities = [
   { city: `N'Djamena`, country: 'Chad', code: 'TD' },
   { city: 'Santiago', country: 'Chile', code: 'CL' },
   { city: 'Beijing', country: 'China', code: 'CN' },
-  { city: 'The Settlement', country: 'Christmas Island', code: 'CX' },
   { city: 'West Island', country: 'Cocos Islands', code: 'CC' },
   { city: 'Bogota', country: 'Colombia', code: 'CO' },
   { city: 'Moroni', country: 'Comoros', code: 'KM' },

@@ -4,22 +4,32 @@ import '../css/CityImg.css';
 import GuessBoxes from './GuessBoxes';
 
 function CityImg() {
-  const [todayCity, setTodayCity] = useState('');
+  
+  const [todayCity, setTodayCity] = useState(() => {
+    const storedCity = localStorage.getItem('todayCity');
+    return storedCity ? storedCity : '';
+  });
 
   useEffect(() => {
 
-    const date = localStorage.getItem('time-guess');
-    const yr = new Date().getUTCFullYear();
-    const mm = new Date().getUTCMonth();
-    const dd = new Date().getUTCDay();
-    const curr = `${mm}-${dd}-${yr}`;
-    if (!(date === curr)) {
-      const currentDate = new Date();
-      const dayOfYear = getDayOfYear(currentDate);
-      const randomIndex = dayOfYear % capitalCities.length;
-      const randomCity = capitalCities[randomIndex].city;
-      setTodayCity(randomCity);
-    }
+    localStorage.setItem('todayCity', todayCity);
+
+  }, [todayCity])
+  
+  useEffect(() => {
+
+    // const date = localStorage.getItem('time-guess');
+    // const yr = new Date().getUTCFullYear();
+    // const mm = new Date().getUTCMonth();
+    // const dd = new Date().getUTCDay();
+    // const curr = `${mm}-${dd}-${yr}`;
+    // if (!(date === curr)) {
+    //   const currentDate = new Date();
+    //   const dayOfYear = getDayOfYear(currentDate);
+    //   const randomIndex = dayOfYear % capitalCities.length;
+    //   const randomCity = capitalCities[randomIndex].city;
+    //   setTodayCity(randomCity);
+    // }
 
     const currentDate = new Date();
     const dayOfYear = getDayOfYear(currentDate);
