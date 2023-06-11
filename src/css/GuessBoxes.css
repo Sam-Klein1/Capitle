@@ -196,10 +196,12 @@ button {
 
 .Dark .text-field {
   background-color: #121212;
+  color: white;
 }
 .Dark .text-field::placeholder {
   color: white;
 }
+
 
 /* Media query for mobile devices */
 @media (max-width: 480px) {
