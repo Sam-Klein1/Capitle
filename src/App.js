@@ -6,12 +6,13 @@ import Title from './components/Title';
 import Timer from './components/Timer';
 
 function App() {
+
   return (
-    <div className="App">
-      <Title />
-      <Timer />
-      <CityImg />
-      <ToastContainer />
+    <div className={"App"}>
+        <Title />
+        <Timer />
+        <CityImg />
+        <ToastContainer />
     </div>
   );
 }

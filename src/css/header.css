@@ -10,21 +10,20 @@
     background: none;
     border: none;
     margin-right: 80px;
+    font-size: 25px;
 }
-
 .about-pic{
     width: 30px;
     height: 30px;
 }
-
 .settings{
   background: none;
   border: none;
+  font-size: 25px;
 }
 .settings-pic{
     width: 30px;
     height: 30px;
-    
 }
 
 .popup-menu{
@@ -103,6 +102,7 @@ input:checked + .slider:before {
 
 .toggle-label {
   margin-left: 10px;
+  color: black;
 }
 
 
@@ -127,7 +127,7 @@ h1{
 
     border: none;
     border-top: 1px solid lightgray;
-    width: 450px; /* Adjust the width as needed */
+    width: 500px; /* Adjust the width as needed */
     margin-bottom: 20px;
 }
 

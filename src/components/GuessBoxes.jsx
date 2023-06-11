@@ -274,7 +274,7 @@ function GuessBoxes({ todayCity }) {
                         id="text-field"
                         className="rectangle text-field"
                         type="text"
-                        placeholder="Enter or choose any capital city"
+                        placeholder=" Enter or choose any capital city..."
                         onFocus={handleInputFocus}
                         onChange={handleInputChange}
                         ref={inputRef}

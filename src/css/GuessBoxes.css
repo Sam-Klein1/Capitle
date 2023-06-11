@@ -67,6 +67,7 @@ button {
 .guess-distance,
 .guess-direction {
   flex: 1;
+  color: black;
 }
 .guess-name{
   font-weight: bold;
@@ -148,6 +149,13 @@ button {
   overflow: hidden;
 }
 
+.Dark .rectangle.incorrect{
+  border: 2px solid white;
+}
+.Dark .rectangle.correct{
+  border: 2px solid white;
+}
+
 
 .guess-button {
 
@@ -157,10 +165,17 @@ button {
     width: 506px; /* Adjust the width as needed */
     height: 35px; /* Adjust the height as needed */
     margin-bottom: 100px;
-  }
+}
+
+.Dark .guess-button {
+  background-color: #121212;
+  color: white;
+  border: 1px solid white;
+}
+
 .guess-button:hover{
 
-  background-color: lightgray;
+  background-color: rgba(128, 128, 128, 0.316);
 }
 
 .guess-button.disabled:hover{
@@ -177,6 +192,13 @@ button {
   max-width: 500px;
   height: 35px;
   margin-bottom: 5px;
+}
+
+.Dark .text-field {
+  background-color: #121212;
+}
+.Dark .text-field::placeholder {
+  color: white;
 }
 
 /* Media query for mobile devices */

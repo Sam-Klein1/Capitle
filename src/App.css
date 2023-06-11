@@ -40,3 +40,8 @@
     transform: rotate(360deg);
   }
 }
+
+.Dark {
+  background-color: #121212;
+  color: white;
+}

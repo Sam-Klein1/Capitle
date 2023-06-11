@@ -47,6 +47,7 @@ function Title() {
     setThemeToggle(!themeToggle);
     const newTheme = themeToggle ? 'Dark' : 'Light';
     localStorage.setItem('theme', newTheme);
+    document.documentElement.className = newTheme;
   };
 
   return (
@@ -55,11 +56,7 @@ function Title() {
         <button
           className="about"
           onClick={toggleInfo}>
-          <img
-            src={require("../assets/about.png")}
-            alt=""
-            className="about-pic"
-          />
+          ❓
         </button>
         {infoOpen && (
           <div className="popup-menu">
@@ -75,11 +72,12 @@ function Title() {
         <button
           className="settings"
           onClick={toggleMenu}>
-          <img
+          {/* <img
             src={require("../assets/settings.png")}
             alt=""
             className="settings-pic"
-          />
+          /> */}
+          ⚙️
         </button>
         {menuOpen && (
           <div className="popup-menu">
