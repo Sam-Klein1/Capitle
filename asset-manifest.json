@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Capitle/static/css/main.edf85ae9.css",
-    "main.js": "/Capitle/static/js/main.6be328cb.js",
+    "main.css": "/Capitle/static/css/main.8876481a.css",
+    "main.js": "/Capitle/static/js/main.2a557473.js",
     "static/js/787.e7c85ac7.chunk.js": "/Capitle/static/js/787.e7c85ac7.chunk.js",
     "static/media/Abuja.jpg": "/Capitle/static/media/Abuja.79a78e41b2a15bc1cd7f.jpg",
     "static/media/default.jpg": "/Capitle/static/media/default.ff56211ce51e7cfd15ef.jpg",
@@ -221,12 +221,12 @@
     "static/media/settings.png": "/Capitle/static/media/settings.af5b2c2944129b199aa3.png",
     "static/media/Brazzaville.jpg": "/Capitle/static/media/Brazzaville.033ed311dddb0c90a949.jpg",
     "index.html": "/Capitle/index.html",
-    "main.edf85ae9.css.map": "/Capitle/static/css/main.edf85ae9.css.map",
-    "main.6be328cb.js.map": "/Capitle/static/js/main.6be328cb.js.map",
+    "main.8876481a.css.map": "/Capitle/static/css/main.8876481a.css.map",
+    "main.2a557473.js.map": "/Capitle/static/js/main.2a557473.js.map",
     "787.e7c85ac7.chunk.js.map": "/Capitle/static/js/787.e7c85ac7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.edf85ae9.css",
-    "static/js/main.6be328cb.js"
+    "static/css/main.8876481a.css",
+    "static/js/main.2a557473.js"
   ]
 }
