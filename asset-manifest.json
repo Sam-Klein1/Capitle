@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.8876481a.css",
-    "main.js": "/static/js/main.933f0b45.js",
+    "main.css": "/static/css/main.78210c19.css",
+    "main.js": "/static/js/main.d68b4bd4.js",
     "static/js/787.e7c85ac7.chunk.js": "/static/js/787.e7c85ac7.chunk.js",
     "static/media/Abuja.jpg": "/static/media/Abuja.79a78e41b2a15bc1cd7f.jpg",
     "static/media/default.jpg": "/static/media/default.ff56211ce51e7cfd15ef.jpg",
@@ -218,15 +218,14 @@
     "static/media/Funafuti.jpg": "/static/media/Funafuti.8d927cdfd72ebbc1b246.jpg",
     "static/media/Pyongyang.jpg": "/static/media/Pyongyang.a4fb5372e09a75a77b55.jpg",
     "static/media/Male.jpg": "/static/media/Male.23bcf2749dbf93d35822.jpg",
-    "static/media/settings.png": "/static/media/settings.af5b2c2944129b199aa3.png",
     "static/media/Brazzaville.jpg": "/static/media/Brazzaville.033ed311dddb0c90a949.jpg",
     "index.html": "/index.html",
-    "main.8876481a.css.map": "/static/css/main.8876481a.css.map",
-    "main.933f0b45.js.map": "/static/js/main.933f0b45.js.map",
+    "main.78210c19.css.map": "/static/css/main.78210c19.css.map",
+    "main.d68b4bd4.js.map": "/static/js/main.d68b4bd4.js.map",
     "787.e7c85ac7.chunk.js.map": "/static/js/787.e7c85ac7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8876481a.css",
-    "static/js/main.933f0b45.js"
+    "static/css/main.78210c19.css",
+    "static/js/main.d68b4bd4.js"
   ]
 }
