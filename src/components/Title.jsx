@@ -67,16 +67,11 @@ function Title() {
           </div>
         )}
         <h1>
-          🏙 CAPIT<span className="green">LE</span>!{" "}
+          🏙CAPIT<span className="green">LE</span>!
         </h1>
         <button
           className="settings"
           onClick={toggleMenu}>
-          {/* <img
-            src={require("../assets/settings.png")}
-            alt=""
-            className="settings-pic"
-          /> */}
           ⚙️
         </button>
         {menuOpen && (

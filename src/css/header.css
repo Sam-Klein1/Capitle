@@ -1,7 +1,5 @@
 .header-content {
-    position: relative;
     display: flex;
-    align-items: center;
     justify-content: center;
     margin-bottom: -20px;
   }
@@ -9,17 +7,19 @@
 .about {
     background: none;
     border: none;
-    margin-right: 80px;
     font-size: 25px;
+    margin-right: 25px;
 }
 .about-pic{
     width: 30px;
     height: 30px;
 }
 .settings{
+  position: relative;
   background: none;
   border: none;
   font-size: 25px;
+  margin-left: 25px;
 }
 .settings-pic{
     width: 30px;
@@ -105,23 +105,10 @@ input:checked + .slider:before {
   color: black;
 }
 
-
-h1{
-    text-align: center;
-    margin-right: 75px;
-  }
-
 .green {
 
     color: green;
 }
-
-/* .thumbnail{
-
-    width: 50px; /* Adjust the width as needed
-  height: 50px; /* Adjust the height as needed 
-  margin-right: 10px; /* Add margin between the image and heading
-} */
 
 .header-line {
 
@@ -131,3 +118,11 @@ h1{
     margin-bottom: 20px;
 }
 
+@media (min-width: 768px) {
+  .settings{
+    margin-left: 80px;
+  }
+  .about{
+    margin-right: 80px;
+  }
+}
