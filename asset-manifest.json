@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.78210c19.css",
-    "main.js": "/static/js/main.1d3a697d.js",
+    "main.css": "/static/css/main.330d1713.css",
+    "main.js": "/static/js/main.69603558.js",
     "static/js/787.e7c85ac7.chunk.js": "/static/js/787.e7c85ac7.chunk.js",
     "static/media/Khartoum.jpg": "/static/media/Khartoum.cf59440bac8d314c0bff.jpg",
     "static/media/Beijing.jpg": "/static/media/Beijing.d710ad9c4489dc0bf879.jpg",
@@ -181,12 +181,12 @@
     "static/media/Kabul.jpg": "/static/media/Kabul.26109704d632b468ba0e.jpg",
     "static/media/Pyongyang.jpg": "/static/media/Pyongyang.a4fb5372e09a75a77b55.jpg",
     "index.html": "/index.html",
-    "main.78210c19.css.map": "/static/css/main.78210c19.css.map",
-    "main.1d3a697d.js.map": "/static/js/main.1d3a697d.js.map",
+    "main.330d1713.css.map": "/static/css/main.330d1713.css.map",
+    "main.69603558.js.map": "/static/js/main.69603558.js.map",
     "787.e7c85ac7.chunk.js.map": "/static/js/787.e7c85ac7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.78210c19.css",
-    "static/js/main.1d3a697d.js"
+    "static/css/main.330d1713.css",
+    "static/js/main.69603558.js"
   ]
 }
