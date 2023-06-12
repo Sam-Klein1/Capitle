@@ -113,7 +113,8 @@ input:checked + .slider:before {
 .header-line {
 
     border: none;
-    border-top: 1px solid lightgray;
+    border-top: 2px solid lightgray;
+    border-radius: 10px;
     width: 500px; /* Adjust the width as needed */
     margin-bottom: 20px;
 }

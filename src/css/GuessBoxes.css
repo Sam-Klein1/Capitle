@@ -183,6 +183,9 @@ button {
   background-color: white;
   cursor: default;
 }
+.Dark .guess-button.disabled:hover{
+  background-color: #121212;
+}
 
 .text-field {
   margin-top: 5px;

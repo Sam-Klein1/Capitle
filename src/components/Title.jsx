@@ -3,18 +3,11 @@ import '../css/header.css';
 
 function Title() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [infoOpen, setinfoOpen] = useState(false);
   const toggleMenu = () => {
-    if (infoOpen) {
-      toggleInfo();
-    }
     setMenuOpen(!menuOpen);
   };
-  const toggleInfo = () => {
-    if (menuOpen) {
-      toggleMenu();
-    }
-    setinfoOpen(!infoOpen);
+  const goToFAQ = () => {
+    document.getElementById('FAQ').scrollIntoView({behavior: 'smooth'})
   };
 
   const [unitToggle, setUnitToggle] = useState(false);
@@ -55,17 +48,9 @@ function Title() {
       <header className="header-content">
         <button
           className="about"
-          onClick={toggleInfo}>
+          onClick={goToFAQ}>
           ❓
         </button>
-        {infoOpen && (
-          <div className="popup-menu">
-            <button className="exit-popup" onClick={toggleInfo}>
-              {"\u2573"}
-            </button>
-            {/* add how to play */}
-          </div>
-        )}
         <h1>
           🏙CAPIT<span className="green">LE</span>!
         </h1>

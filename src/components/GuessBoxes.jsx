@@ -24,6 +24,7 @@ function GuessBoxes({ todayCity }) {
     const inputRef = useRef(null);
     const suggestionRef = useRef(null);
     const [code, setCode] = useState("");
+    const [showTodayCity, setShowTodayCity] = useState(localStorage.getItem('isGuessingDisabled') ? true : false);
 
     // Restoring previous guesses from local storage
     useEffect(() => {
@@ -288,6 +289,11 @@ function GuessBoxes({ todayCity }) {
                             Guess!🌆
                     </button>
                 </>
+                {showTodayCity && (
+                    <div className='todayCity'>
+                        Today's City: {todayCity}
+                    </div>
+                )}
         </div>
     );
 }
