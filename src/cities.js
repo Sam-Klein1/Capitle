@@ -162,7 +162,6 @@ export const capitalCities = [
   { city: 'Oslo', country: 'Norway', code: 'NO' },
   { city: 'Muscat', country: 'Oman', code: 'OM' },
   { city: 'Islamabad', country: 'Pakistan', code: 'PK' },
-  { city: 'Melekeok', country: 'Palau', code: 'PW' },
   { city: 'Jerusalem', country: 'Palestine', code: 'PS' },
   { city: 'Panama City', country: 'Panama', code: 'PA' },
   { city: 'Port Moresby', country: 'Papua New Guinea', code: 'PG' },

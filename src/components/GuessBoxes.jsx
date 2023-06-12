@@ -24,7 +24,7 @@ function GuessBoxes({ todayCity }) {
     const inputRef = useRef(null);
     const suggestionRef = useRef(null);
     const [code, setCode] = useState("");
-    const [showTodayCity, setShowTodayCity] = useState(localStorage.getItem('isGuessingDisabled') ? true : false);
+    let showTodayCity = localStorage.getItem('isGuessingDisabled') ? true : false;
 
     // Restoring previous guesses from local storage
     useEffect(() => {
@@ -163,6 +163,7 @@ function GuessBoxes({ todayCity }) {
     //main game logic happens here
     const handleGuess = () => {
         
+        localStorage.setItem('time-stamp', new Date().getDate());
         //build our "guess"
         const guess = document.getElementById("text-field").value;
         let distance = Math.floor(calculateDist(guess, todayCity));

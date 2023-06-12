@@ -8,12 +8,9 @@ function Timer() {
       const interval = setInterval(() => {
         const now = new Date();
         const endOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 23, 59, 59);
-        const timeRemaining = endOfDay - now /*- 40000000 - 8000000*/;
+        const timeRemaining = endOfDay - now;
 
         if (timeRemaining <= 0) {
-            localStorage.removeItem('todayCity');
-            localStorage.removeItem('guesses');
-            localStorage.removeItem('currentRectangleIndex');
             window.location.reload();
         }
   
@@ -30,7 +27,7 @@ function Timer() {
   
     return <div className="timer"> 
                 <span style={{marginRight: 10, fontSize: 15, fontWeight: 'bolder'}}>{'\u21BB'}</span>
-                game in:
+                 in:
                 <span style={{marginLeft: 5, fontStyle: 'italic', fontSize: 13}}> {timeLeft}</span>
             </div>;
   }
