@@ -19,7 +19,11 @@ const Faq = () => {
         answer: 'A random city is chosen everyday! Log on each day for a chance at a new guess!' },
 
     { question: 'What does the percent mean? 🤨', 
-        answer: 'The percentage next to the distance is used to give you a rough understanding of how close to the answer you are. For example, if you have a percentage of ~0% you are the furthest away you can be from the Capitle of the day.' },
+        answer: 'The percentage next to the distance is used to give you a rough understanding of how close to the answer you are. For example, if you have a percentage of ~0% you are the furthest away you can be from the Capitle of the day.'},
+    
+    { question: 'How can I support ❤️',
+        answer: 'Your support is always appreciated! ',
+          link: 'https://venmo.com/SamKlein55'}
     // Add more FAQ items here
   ];
 
@@ -37,6 +41,7 @@ const Faq = () => {
           </div>
           <div className={`faq-answer ${activeIndex === index ? 'show' : ''}`}>
             <p>{item.answer}</p>
+            <a href={item.link}>Buy me boba🧋</a>
           </div>
         </div>
       ))}
