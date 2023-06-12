@@ -15,11 +15,11 @@ const Faq = () => {
     { question: 'Why is my guess not valid? 😒', 
         answer: 'Defining a country can be complex and arbitrary. It encompasses sovereign states, lands, uninhabited islands, and other political entities. Additionally, there are self-declared sovereign states like Somaliland, which lack widespread recognition. So I just used this list I found online: http://techslides.com/list-of-countries-and-capitals' },
 
-    { question: 'Blank 2', 
-        answer: 'Description 2' },
+    { question: 'How is the Capitle of the day determined? 🫤', 
+        answer: 'A random city is chosen everyday! Log on each day for a chance at a new guess!' },
 
-    { question: 'Blank 2', 
-        answer: 'Description 2' },
+    { question: 'What does the percent mean? 🤨', 
+        answer: 'The percentage next to the distance is used to give you a rough understanding of how close to the answer you are. For example, if you have a percentage of ~0% you are the furthest away you can be from the Capitle of the day.' },
     // Add more FAQ items here
   ];
 
