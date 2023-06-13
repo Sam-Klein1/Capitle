@@ -222,7 +222,11 @@ function GuessBoxes({ todayCity }) {
         if (guess.toLowerCase() === todayCity.toLowerCase()) {
             setShowConfetti(true);
             setTimeout(() => {
-                alert("You are out of guesses!\n\nToday's city: " + todayCity);
+                toast.success("Wooo hooo!! you guessed correctly 🎉", {
+                    autoClose: 5000,
+                    hideProgressBar: true,
+                })
+                // document.getElementById('todayCity').scrollIntoView({behavior: 'smooth'})
             }, 1500);
             localStorage.setItem("isGuessingDisabled", true);
             setShowTodayCity(true);
@@ -250,7 +254,7 @@ function GuessBoxes({ todayCity }) {
     width={window.innerWidth}
     height={window.innerHeight}
     recycle={false}
-    numberOfPieces={2000}
+    numberOfPieces={1000}
   />
 )}
             {showCityList && (
