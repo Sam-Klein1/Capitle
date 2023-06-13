@@ -51,8 +51,13 @@ function Title() {
           onClick={goToFAQ}>
           ❓
         </button>
+        <img 
+          className="favicon"
+          src="./favicon.png"
+          alt="Made by my love, Esther ❤️">
+        </img>
         <h1>
-          🏙CAPIT<span className="green">LE</span>!
+          CAPIT<span className="green">LE</span>!
         </h1>
         <button
           className="settings"

@@ -10,21 +10,29 @@ const date = new Date().getDate();
 console.log(date);
 const ts = parseInt(localStorage.getItem('time-stamp'));
 console.log(ts);
-if(date !== ts){
+if (date !== ts) {
   console.log("clearing storage...");
   localStorage.clear();
 }
 
 function App() {
 
+  function reload(){ 
+    window.location.reload(); 
+  }
+
   return (
-    <div className={"App"}>
-        <Title />
-        <Timer />
-        <CityImg />
-        <Faq />
-        <ToastContainer />
-    </div>
+    <div className="App">
+      <button className='refresh'
+              onClick={reload}>
+          Refresh for most recent data
+      </button>
+      <Title />
+      <Timer />
+      <CityImg />
+      <Faq />
+      <ToastContainer />
+    </div >
   );
 }
 

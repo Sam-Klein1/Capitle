@@ -13,7 +13,10 @@ const Faq = () => {
         answer: 'Its simple! Simply guess as to what you think the Capital of the day is based off of the picture. The game will give you hints as you progress to help you guess right 😄' },
 
     { question: 'Why is my guess not valid? 😒', 
-        answer: 'Defining a country can be complex and arbitrary. It encompasses sovereign states, lands, uninhabited islands, and other political entities. Additionally, there are self-declared sovereign states like Somaliland, which lack widespread recognition. So I just used this list I found online: http://techslides.com/list-of-countries-and-capitals' },
+        answer: 'Defining a country can be complex and arbitrary. It encompasses sovereign states, lands, uninhabited islands, and other political entities. Additionally, there are self-declared sovereign states like Somaliland, which lack widespread recognition. So I just used this list I found online',
+          link: 'http://techslides.com/list-of-countries-and-capitals',
+      linkText: 'here' },
+
 
     { question: 'How is the Capitle of the day determined? 🫤', 
         answer: 'A random city is chosen everyday! Log on each day for a chance at a new guess!' },
@@ -23,7 +26,8 @@ const Faq = () => {
     
     { question: 'How can I support ❤️',
         answer: 'Your support is always appreciated! ',
-          link: 'https://venmo.com/SamKlein55'}
+          link: 'https://venmo.com/SamKlein55',
+      linkText: 'Buy me boba 🧋'}
     // Add more FAQ items here
   ];
 
@@ -41,7 +45,9 @@ const Faq = () => {
           </div>
           <div className={`faq-answer ${activeIndex === index ? 'show' : ''}`}>
             <p>{item.answer}</p>
-            <a href={item.link}>Buy me boba🧋</a>
+            {item.link && (
+                <a href={item.link}>{item.linkText}</a>
+            )}
           </div>
         </div>
       ))}

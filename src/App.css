@@ -45,3 +45,11 @@
   background-color: #121212;
   color: white;
 }
+
+.refresh{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border: none;
+  background-color: slategray;
+}

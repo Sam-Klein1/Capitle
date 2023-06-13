@@ -10,6 +10,14 @@
     font-size: 25px;
     margin-right: 25px;
 }
+
+.favicon{
+  margin-top: 15px;
+  margin-right: 5px;
+  width: 55px;
+  height: 50px;
+}
+
 .about-pic{
     width: 30px;
     height: 30px;

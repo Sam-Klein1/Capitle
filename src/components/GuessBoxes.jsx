@@ -6,6 +6,7 @@ import '../css/GuessBoxes.css';
 import '../css/suggestions.css';
 import 'react-toastify/dist/ReactToastify.css';
 import CountUp from './CountUp.jsx';
+import Confetti from 'react-confetti';
 
 function GuessBoxes({ todayCity }) {
     const distanceUnit = localStorage.getItem('distanceUnit');
@@ -24,7 +25,8 @@ function GuessBoxes({ todayCity }) {
     const inputRef = useRef(null);
     const suggestionRef = useRef(null);
     const [code, setCode] = useState("");
-    let showTodayCity = localStorage.getItem('isGuessingDisabled') ? true : false;
+    const [showConfetti, setShowConfetti] = useState(false);
+    const [showTodayCity, setShowTodayCity] = useState(localStorage.getItem('isGuessingDisabled') ? true : false);
 
     // Restoring previous guesses from local storage
     useEffect(() => {
@@ -218,17 +220,24 @@ function GuessBoxes({ todayCity }) {
         document.getElementById("text-field").value = '';
 
         if (guess.toLowerCase() === todayCity.toLowerCase()) {
+            setShowConfetti(true);
             setTimeout(() => {
-                alert('You guessed right!');
-            }, 1200);
+                alert("You are out of guesses!\n\nToday's city: " + todayCity);
+            }, 1500);
             localStorage.setItem("isGuessingDisabled", true);
+            setShowTodayCity(true);
             setIsGuessingDisabled(localStorage.getItem("isGuessingDisabled"));
         }
         else if (nextRectangleIndex === guesses.length) {
             setTimeout(() => {
-                alert("You are out of guesses!\n\nToday's city: " + todayCity);
+                toast.error('😔 Sorry! the Capitle for today is ' + todayCity + 'Please try again tomorrow!', {
+                    autoClose: 5000,
+                    hideProgressBar: true,
+                    position: toast.POSITION.TOP_CENTER,
+                })
             }, 1200);
             localStorage.setItem("isGuessingDisabled", true);
+            setShowTodayCity(true);
             setIsGuessingDisabled(localStorage.getItem("isGuessingDisabled"));
         }
     };
@@ -236,6 +245,14 @@ function GuessBoxes({ todayCity }) {
     
     return (
         <div className="guess-boxes">
+            {showConfetti && (
+  <Confetti
+    width={window.innerWidth}
+    height={window.innerHeight}
+    recycle={false}
+    numberOfPieces={2000}
+  />
+)}
             {showCityList && (
                 <div className="suggestion-buttons" ref={suggestionRef}>
                     {suggestionList.map((city, index) => (
