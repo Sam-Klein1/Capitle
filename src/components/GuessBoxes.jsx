@@ -91,12 +91,12 @@ function GuessBoxes({ todayCity }) {
     }, []);
     
     const getLatitude = (city) => {
-        const foundCity = cityData.find((item) => item.CapitalName === city);
+        const foundCity = cityData.find((item) => item.CapitalName.toLowerCase() === city);
         return foundCity ? foundCity.CapitalLatitude : 0.0;
     };
     
     const getLongitude = (city) => {
-        const foundCity = cityData.find((item) => item.CapitalName === city);
+        const foundCity = cityData.find((item) => item.CapitalName.toLowerCase() === city);
         return foundCity ? foundCity.CapitalLongitude : 0.0;
     };
     
@@ -110,8 +110,8 @@ function GuessBoxes({ todayCity }) {
 
     const calculateDist = (src, actual) => {
         
-        const src_cords = { latitude: getLatitude(src), longitude: getLongitude(src) };
-        const actual_cords = { latitude: getLatitude(actual), longitude: getLongitude(actual) };
+        const src_cords = { latitude: getLatitude(src.toLowerCase()), longitude: getLongitude(src.toLowerCase()) };
+        const actual_cords = { latitude: getLatitude(actual.toLowerCase()), longitude: getLongitude(actual.toLowerCase()) };
         const dist = geolib.getDistance(src_cords, actual_cords);
 
         return dist/1000; //gives distance between src and actual in KM
