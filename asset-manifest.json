@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.41b7384f.css",
-    "main.js": "/static/js/main.f60e5c0e.js",
+    "main.js": "/static/js/main.347716f5.js",
     "static/js/787.e7c85ac7.chunk.js": "/static/js/787.e7c85ac7.chunk.js",
     "static/media/Khartoum.jpg": "/static/media/Khartoum.cf59440bac8d314c0bff.jpg",
     "static/media/Beijing.jpg": "/static/media/Beijing.d710ad9c4489dc0bf879.jpg",
@@ -82,6 +82,7 @@
     "static/media/Dili.jpg": "/static/media/Dili.6f49efa150b9a16dcab9.jpg",
     "static/media/Managua.jpg": "/static/media/Managua.69970f85fc95486d2566.jpg",
     "static/media/Nicosia.jpg": "/static/media/Nicosia.4fcfbf2ef93e82be512d.jpg",
+    "static/media/Port Moresby.jpg": "/static/media/Port Moresby.dc2dd91327bdf85a1fbe.jpg",
     "static/media/Ottawa.jpg": "/static/media/Ottawa.a00232e73abc72eadfe3.jpg",
     "static/media/Djibouti.jpg": "/static/media/Djibouti.366e0024ce0ded46a6c4.jpg",
     "static/media/Rome.jpg": "/static/media/Rome.75933113257996a42f49.jpg",
@@ -183,11 +184,11 @@
     "static/media/Pyongyang.jpg": "/static/media/Pyongyang.a4fb5372e09a75a77b55.jpg",
     "index.html": "/index.html",
     "main.41b7384f.css.map": "/static/css/main.41b7384f.css.map",
-    "main.f60e5c0e.js.map": "/static/js/main.f60e5c0e.js.map",
+    "main.347716f5.js.map": "/static/js/main.347716f5.js.map",
     "787.e7c85ac7.chunk.js.map": "/static/js/787.e7c85ac7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.41b7384f.css",
-    "static/js/main.f60e5c0e.js"
+    "static/js/main.347716f5.js"
   ]
 }
