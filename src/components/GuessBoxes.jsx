@@ -91,12 +91,12 @@ function GuessBoxes({ todayCity }) {
     }, []);
     
     const getLatitude = (city) => {
-        const foundCity = cityData.find((item) => item.CapitalName.toLowerCase() === city);
+        const foundCity = cityData.find((item) => item.CapitalName === city);
         return foundCity ? foundCity.CapitalLatitude : 0.0;
     };
     
     const getLongitude = (city) => {
-        const foundCity = cityData.find((item) => item.CapitalName.toLowerCase() === city);
+        const foundCity = cityData.find((item) => item.CapitalName === city);
         return foundCity ? foundCity.CapitalLongitude : 0.0;
     };
     
@@ -110,8 +110,8 @@ function GuessBoxes({ todayCity }) {
 
     const calculateDist = (src, actual) => {
         
-        const src_cords = { latitude: getLatitude(src.toLowerCase()), longitude: getLongitude(src.toLowerCase()) };
-        const actual_cords = { latitude: getLatitude(actual.toLowerCase()), longitude: getLongitude(actual.toLowerCase()) };
+        const src_cords = { latitude: getLatitude(src), longitude: getLongitude(src) };
+        const actual_cords = { latitude: getLatitude(actual), longitude: getLongitude(actual) };
         const dist = geolib.getDistance(src_cords, actual_cords);
 
         return dist/1000; //gives distance between src and actual in KM
@@ -246,7 +246,6 @@ function GuessBoxes({ todayCity }) {
         }
     };
 
-    
     return (
         <div className="guess-boxes">
             {showConfetti && (
@@ -313,7 +312,8 @@ function GuessBoxes({ todayCity }) {
                 </>
                 {showTodayCity && (
                     <div className='todayCity'>
-                        Today's City: {todayCity}
+                        <h2>Today's City: <span style={{borderRadius: '5px', backgroundColor: 'red', fontStyle: 'italic'}}>{todayCity}</span></h2>
+                        Learn about <a className='wikilink' href={`https://wikipedia.org/wiki/${todayCity}`}>{todayCity}</a>!
                     </div>
                 )}
         </div>

@@ -221,3 +221,14 @@ button {
     max-width: 96%; /* Adjust the width as needed */
   }
 }
+
+.wikilink {
+  text-decoration: underline;
+  color: black;
+}
+
+.Dark .wikilink{
+  color: white;
+}
+
+
