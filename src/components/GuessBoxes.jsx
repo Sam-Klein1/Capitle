@@ -234,7 +234,7 @@ function GuessBoxes({ todayCity }) {
         }
         else if (nextRectangleIndex === guesses.length) {
             setTimeout(() => {
-                toast.error('😔 Sorry! the Capitle for today is ' + todayCity + 'Please try again tomorrow!', {
+                toast.error('😔 Sorry! the Capitle for today is ' + todayCity + '. Please try again tomorrow!', {
                     autoClose: 5000,
                     hideProgressBar: true,
                     position: toast.POSITION.TOP_CENTER,
