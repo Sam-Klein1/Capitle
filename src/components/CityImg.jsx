@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { capitalCities } from '../cities';
+import { capitalCities, randomIndexes } from '../cities';
 import '../css/CityImg.css';
 import GuessBoxes from './GuessBoxes';
 
 const getRandomCity = () => {
   const currentDate = new Date();
   const dayOfYear = getDayOfYear(currentDate);
-  const randomIndex = dayOfYear % capitalCities.length;
+  const randomIndex = randomIndexes[dayOfYear % capitalCities.length];
   const randomCity = capitalCities[randomIndex].city;
   return randomCity;
 }

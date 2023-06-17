@@ -1,4 +1,5 @@
 import json
+from os.path import exists
 
 def build_array_from_json(file_path):
     with open(file_path) as file:
@@ -6,13 +7,14 @@ def build_array_from_json(file_path):
         
         data_array = []
         for entry in json_data:
+            #check if .jpg of city exitsts
+            #if it DOES NOT, then add it to the arr
             capital = entry['CapitalName']
-            country = entry['CountryName']
-            code = entry['CountryCode']
-            
-            data_array.append(f"'{capital}', ")
+            file_exists = exists(f"./assets/{capital}.jpg")
+            if not file_exists: 
+                data_array.append(f"{capital}, ")
         
-        return data_array
+        return sorted(data_array)
 
 # Replace 'data.json' with the actual path to your JSON file
 json_file_path = '/Users/samkl/repos/Capitle/public/cityData.json'

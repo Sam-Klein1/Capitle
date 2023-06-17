@@ -5,12 +5,10 @@ export const capitalCities = [
   { city: 'Mariehamn', country: 'Aland Islands', code: 'AX' },
   { city: 'Yaren', country: 'Nauru', code: 'NR' },
   { city: 'Marigot', country: 'Saint Martin', code: 'MF' },
-  { city: 'Atafu', country: 'Tokelau', code: 'TK' },
   { city: 'El-AaiÃºn', country: 'Western Sahara', code: 'EH' },
   { city: 'Kabul', country: 'Afghanistan', code: 'AF' },
   { city: 'Tirana', country: 'Albania', code: 'AL' },
   { city: 'Algiers', country: 'Algeria', code: 'DZ' },
-  { city: 'Pago Pago', country: 'American Samoa', code: 'AS' },
   { city: 'Andorra la Vella', country: 'Andorra', code: 'AD' },
   { city: 'Luanda', country: 'Angola', code: 'AO' },
   { city: 'The Valley', country: 'Anguilla', code: 'AI' },
@@ -66,7 +64,7 @@ export const capitalCities = [
   { city: 'Copenhagen', country: 'Denmark', code: 'DK' },
   { city: 'Djibouti', country: 'Djibouti', code: 'DJ' },
   { city: 'Roseau', country: 'Dominica', code: 'DM' },
-  { city: 'Santo Domingo', country: 'Dominican Republic', code: 'DO' },
+  { city: 'Santo Domi/go', country: 'Dominican Republic', code: 'DO' },
   { city: 'Quito', country: 'Ecuador', code: 'EC' },
   { city: 'Cairo', country: 'Egypt', code: 'EG' },
   { city: 'San Salvador', country: 'El Salvador', code: 'SV' },
@@ -156,7 +154,6 @@ export const capitalCities = [
   { city: 'Managua', country: 'Nicaragua', code: 'NI' },
   { city: 'Niamey', country: 'Niger', code: 'NE' },
   { city: 'Abuja', country: 'Nigeria', code: 'NG' },
-  { city: 'Alofi', country: 'Niue', code: 'NU' },
   { city: 'Kingston', country: 'Norfolk Island', code: 'NF' },
   { city: 'Saipan', country: 'Northern Mariana Islands', code: 'MP' },
   { city: 'Oslo', country: 'Norway', code: 'NO' },
@@ -168,7 +165,6 @@ export const capitalCities = [
   { city: 'Asuncion', country: 'Paraguay', code: 'PY' },
   { city: 'Lima', country: 'Peru', code: 'PE' },
   { city: 'Manila', country: 'Philippines', code: 'PH' },
-  { city: 'Adamstown', country: 'Pitcairn Islands', code: 'PN' },
   { city: 'Warsaw', country: 'Poland', code: 'PL' },
   { city: 'Lisbon', country: 'Portugal', code: 'PT' },
   { city: 'San Juan', country: 'Puerto Rico', code: 'PR' },
@@ -239,9 +235,24 @@ export const capitalCities = [
   { city: 'Diego Garcia', country: 'British Indian Ocean Territory', code: 'IO' },
   ];
 
-  export function getRandomCity() {
-    const randomIndex = Math.floor(Math.random() * capitalCities.length);
-    return capitalCities[randomIndex].city;
-  }
-  
+export const randomIndexes = [
+    190, 160, 245, 106, 64, 132, 168, 
+    227, 130, 105, 180, 75, 240, 21, 
+    40, 159, 52, 172, 124, 194, 67, 77, 
+    138, 56, 242, 50, 152, 239, 205, 82, 
+    174, 219, 204, 11, 237, 68, 236, 63, 
+    213, 199, 233, 135, 58, 226, 90, 85, 
+    97, 41, 116, 6, 48, 203, 70, 137, 76, 
+    7, 246, 231, 47, 167, 217, 42, 88, 
+    165, 39, 98, 232, 26, 27, 13, 
+    126, 201, 161, 235, 121, 53, 61, 
+    12, 112, 119, 193, 69, 54, 151, 
+    108, 146, 202, 32, 79, 149, 37, 187, 
+    150, 148, 223, 8, 100, 192, 211, 162, 
+    55, 171, 141, 156, 94, 214, 103, 134, 
+    29, 60, 86, 24, 164, 74, 128, 207, 189, 
+    102, 224, 145, 153, 15, 215, 20, 107, 
+    196, 99, 120, 198, 248, 173, 89, 200, 
+    114, 186, 22, 179, 163, 208, 238, 139, 118, 80, 92, 2, 197, 73, 210, 45, 0, 10, 5, 147, 195, 178, 31, 83, 23, 44, 9, 96, 111, 95, 247, 36, 230, 81, 181, 16, 185, 122, 129, 
+    18, 30, 158, 110, 93, 127, 33, 241, 175, 51, 136, 131, 71, 177, 206, 225, 222, 66, 101, 182, 34, 249, 72, 155, 104, 140, 43, 117, 123, 142, 144, 78, 176, 221, 57, 115, 228, 62, 14, 157, 35, 109, 28, 113, 191, 84, 184, 46, 188, 59, 49, 243, 4, 133, 212, 87, 220, 125, 154, 25, 216, 91, 209, 229, 183, 234, 244, 1, 166, 19, 169, 17, 170, 3, 38, 218, 143, 65];
   
