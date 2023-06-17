@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.41b7384f.css",
-    "main.js": "/static/js/main.d397e599.js",
+    "main.js": "/static/js/main.368d2370.js",
     "static/js/787.e7c85ac7.chunk.js": "/static/js/787.e7c85ac7.chunk.js",
     "static/media/Amman.jpg": "/static/media/Amman.224dad6080bfa6b4ab05.jpg",
     "static/media/Tallinn.jpg": "/static/media/Tallinn.a17c21716b44e52e2af8.jpg",
@@ -230,11 +230,11 @@
     "static/media/Asmara.jpg": "/static/media/Asmara.e6a514e3ef3ab4f05b29.jpg",
     "index.html": "/index.html",
     "main.41b7384f.css.map": "/static/css/main.41b7384f.css.map",
-    "main.d397e599.js.map": "/static/js/main.d397e599.js.map",
+    "main.368d2370.js.map": "/static/js/main.368d2370.js.map",
     "787.e7c85ac7.chunk.js.map": "/static/js/787.e7c85ac7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.41b7384f.css",
-    "static/js/main.d397e599.js"
+    "static/js/main.368d2370.js"
   ]
 }
