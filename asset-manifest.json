@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.41b7384f.css",
-    "main.js": "/static/js/main.3a2f8872.js",
+    "main.js": "/static/js/main.6d3f91b1.js",
     "static/js/787.e7c85ac7.chunk.js": "/static/js/787.e7c85ac7.chunk.js",
     "static/media/Amman.jpg": "/static/media/Amman.224dad6080bfa6b4ab05.jpg",
     "static/media/Tallinn.jpg": "/static/media/Tallinn.a17c21716b44e52e2af8.jpg",
@@ -209,6 +209,7 @@
     "static/media/Bridgetown.jpg": "/static/media/Bridgetown.838127ae5158e18f3533.jpg",
     "static/media/Plymouth.jpg": "/static/media/Plymouth.2942922de56edac01d99.jpg",
     "static/media/Stockholm.jpg": "/static/media/Stockholm.d4dd29539a8d61b05e2e.jpg",
+    "static/media/Gustavia.jpg": "/static/media/Gustavia.4018da5ce722a3eedefb.jpg",
     "static/media/Rabat.jpg": "/static/media/Rabat.5ebb0e98feeda87a6021.jpg",
     "static/media/Rangoon.jpg": "/static/media/Rangoon.3eaa16c2449d444be577.jpg",
     "static/media/Luanda.jpg": "/static/media/Luanda.286769e2f2b81e3a642a.jpg",
@@ -230,11 +231,11 @@
     "static/media/Asmara.jpg": "/static/media/Asmara.e6a514e3ef3ab4f05b29.jpg",
     "index.html": "/index.html",
     "main.41b7384f.css.map": "/static/css/main.41b7384f.css.map",
-    "main.3a2f8872.js.map": "/static/js/main.3a2f8872.js.map",
+    "main.6d3f91b1.js.map": "/static/js/main.6d3f91b1.js.map",
     "787.e7c85ac7.chunk.js.map": "/static/js/787.e7c85ac7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.41b7384f.css",
-    "static/js/main.3a2f8872.js"
+    "static/js/main.6d3f91b1.js"
   ]
 }
